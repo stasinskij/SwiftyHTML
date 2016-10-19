@@ -6,6 +6,6 @@
 //
 //
 
-protocol StringRepresentable {
+public protocol StringRepresentable {
     func stringRepresentation() -> String
 }

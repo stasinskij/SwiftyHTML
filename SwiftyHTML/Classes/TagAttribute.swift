@@ -6,7 +6,7 @@
 //
 //
 
-protocol TagAttribute: StringRepresentable {
+public protocol TagAttribute: StringRepresentable {
     var name: String { get }
     var value: String { get set }
 }

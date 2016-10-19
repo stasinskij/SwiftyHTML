@@ -6,7 +6,7 @@
 //
 //
 
-protocol Tag: StringRepresentable {
+public protocol Tag: StringRepresentable {
     var name: String { get }
     var content: String { get set }
     var range: NSRange { get set }

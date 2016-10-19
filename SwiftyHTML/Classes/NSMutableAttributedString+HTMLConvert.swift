@@ -6,7 +6,7 @@
 //
 //
 
-extension NSMutableAttributedString {
+public extension NSMutableAttributedString {
     
     func toHTML() -> String {
         return ""
