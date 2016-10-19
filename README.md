@@ -22,7 +22,7 @@ pod "SwiftyHTML"
 
 ## Author
 
-Bartosz Tułodziecki, bartosz.tulodziecki@implix.com
+Bartosz Tułodziecki, bartosz.tulodziecki@gmail.com
 
 ## License
 
