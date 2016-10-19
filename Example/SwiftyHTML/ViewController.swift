@@ -10,15 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    private lazy var linkString: NSMutableAttributedString = {
+        let str = NSMutableAttributedString(string: "A Google link string")
+        str.addAttribute(NSLinkAttributeName, value: "https://www.google.com", range: NSMakeRange(0, str.length))
+        return str
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
 

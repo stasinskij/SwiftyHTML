@@ -10,10 +10,13 @@
 		0E0FD9C9CEC73E4DDFACAB1501017928 /* SwiftyHTML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD2D3DD2F0707FB7C675FC0AA097914 /* SwiftyHTML-dummy.m */; };
 		1C07F1EF82962539397F849A98AA290A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		1D32AFBD29237AD7D210B5F382104A21 /* Pods-SwiftyHTML_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C573583CAF235CD1A733B41A5CEA4662 /* Pods-SwiftyHTML_Example-dummy.m */; };
-		816379E3ED6BA08583097F56DBDAEA5C /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05292BF0D07CE356D9B2FC0D02C72F6 /* ReplaceMe.swift */; };
 		90B7D8B382B8B85778CF51CD5FA96A51 /* Pods-SwiftyHTML_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 209ECDA0E91F6D730DDEC1A6778C6E52 /* Pods-SwiftyHTML_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D327C1B94A2D8AAC651D36A01C1CC20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		BAF9D62FC5C2AB4F47BBBC71F325E930 /* Pods-SwiftyHTML_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF835B8281607224C9C44B14884BDE81 /* Pods-SwiftyHTML_Tests-dummy.m */; };
+		BB2CE2B81DB7AB81008C7E74 /* NSMutableAttributedString+HTMLConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CE2B51DB7AB81008C7E74 /* NSMutableAttributedString+HTMLConvert.swift */; };
+		BB2CE2BD1DB7B7AD008C7E74 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CE2BA1DB7B7AD008C7E74 /* Tag.swift */; };
+		BB2CE2C11DB7B8AB008C7E74 /* TagAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CE2BE1DB7B8AB008C7E74 /* TagAttribute.swift */; };
+		BB2CE2C51DB7B99E008C7E74 /* StringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CE2C21DB7B99E008C7E74 /* StringRepresentable.swift */; };
 		ED85D49C5633EAC9534C2EA47F92C6EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		F564094DD0348B9098D2A12C3D31BA99 /* Pods-SwiftyHTML_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9F652B6C2444D56886D5FBE52AE39ED /* Pods-SwiftyHTML_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FFEC721F40B701C88454564B6D00A59E /* SwiftyHTML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD220BFA9D826453A1719C556623F55 /* SwiftyHTML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -50,6 +53,10 @@
 		A61E62B07955058CF80D32693B8B6896 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B68A436CBC4FF44C0D62BE5199DA69C4 /* Pods_SwiftyHTML_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyHTML_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3999CA4B152BEFD30871C90505A2B9 /* SwiftyHTML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyHTML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB2CE2B51DB7AB81008C7E74 /* NSMutableAttributedString+HTMLConvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+HTMLConvert.swift"; sourceTree = "<group>"; };
+		BB2CE2BA1DB7B7AD008C7E74 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		BB2CE2BE1DB7B8AB008C7E74 /* TagAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagAttribute.swift; sourceTree = "<group>"; };
+		BB2CE2C21DB7B99E008C7E74 /* StringRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringRepresentable.swift; sourceTree = "<group>"; };
 		BF835B8281607224C9C44B14884BDE81 /* Pods-SwiftyHTML_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftyHTML_Tests-dummy.m"; sourceTree = "<group>"; };
 		C1463E4CF824856DBE31B1FA2C9FE252 /* SwiftyHTML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyHTML-prefix.pch"; sourceTree = "<group>"; };
 		C1684FEF8C221F24CED0DD93ED26EB72 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,7 +67,6 @@
 		E11C09C20B174285E4D6AA7A2BFD7712 /* Pods-SwiftyHTML_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyHTML_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E953C9EF971279D694DF8C738DDC9388 /* Pods-SwiftyHTML_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftyHTML_Tests.modulemap"; sourceTree = "<group>"; };
 		ECD2D3DD2F0707FB7C675FC0AA097914 /* SwiftyHTML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyHTML-dummy.m"; sourceTree = "<group>"; };
-		F05292BF0D07CE356D9B2FC0D02C72F6 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		F150F306FF20602C7D7F458BA96453F7 /* Pods-SwiftyHTML_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyHTML_Example-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +119,8 @@
 		400B84CAA51794783425CCD4EA72A72E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F05292BF0D07CE356D9B2FC0D02C72F6 /* ReplaceMe.swift */,
+				BB2CE2B91DB7AD5F008C7E74 /* Models */,
+				BB2CE2B51DB7AB81008C7E74 /* NSMutableAttributedString+HTMLConvert.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -190,6 +197,16 @@
 			);
 			name = "Pods-SwiftyHTML_Example";
 			path = "Target Support Files/Pods-SwiftyHTML_Example";
+			sourceTree = "<group>";
+		};
+		BB2CE2B91DB7AD5F008C7E74 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB2CE2BA1DB7B7AD008C7E74 /* Tag.swift */,
+				BB2CE2BE1DB7B8AB008C7E74 /* TagAttribute.swift */,
+				BB2CE2C21DB7B99E008C7E74 /* StringRepresentable.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -313,6 +330,9 @@
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 				TargetAttributes = {
+					330428AEB23A8EF2E66018E713A35F6E = {
+						LastSwiftMigration = 0800;
+					};
 					358F150238F09E2839205D1D78CAC315 = {
 						LastSwiftMigration = 0800;
 					};
@@ -345,8 +365,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				816379E3ED6BA08583097F56DBDAEA5C /* ReplaceMe.swift in Sources */,
+				BB2CE2BD1DB7B7AD008C7E74 /* Tag.swift in Sources */,
+				BB2CE2C11DB7B8AB008C7E74 /* TagAttribute.swift in Sources */,
 				0E0FD9C9CEC73E4DDFACAB1501017928 /* SwiftyHTML-dummy.m in Sources */,
+				BB2CE2C51DB7B99E008C7E74 /* StringRepresentable.swift in Sources */,
+				BB2CE2B81DB7AB81008C7E74 /* NSMutableAttributedString+HTMLConvert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 520B46720A925CC5C2843E6BE0015CD9 /* Pods-SwiftyHTML_Tests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -444,6 +468,8 @@
 				PRODUCT_NAME = Pods_SwiftyHTML_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -454,6 +480,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 77CE64E44D587BF6AB7E5D62615D5E8E /* Pods-SwiftyHTML_Tests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -477,6 +504,7 @@
 				PRODUCT_NAME = Pods_SwiftyHTML_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -530,6 +558,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8525BAE5AAFABF1B2BFD7C9C4A432E2B /* SwiftyHTML.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -560,6 +589,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E11C09C20B174285E4D6AA7A2BFD7712 /* Pods-SwiftyHTML_Example.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -595,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 338428D4B9C9E939EC84783472E4760C /* Pods-SwiftyHTML_Example.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -629,6 +660,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8525BAE5AAFABF1B2BFD7C9C4A432E2B /* SwiftyHTML.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
