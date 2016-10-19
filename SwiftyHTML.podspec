@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftyHTML'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SwiftyHTML.'
+  s.summary          = 'A delightful framework for converting HTML to native Swift classes.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,17 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+                        A delightful framework for converting HTML to native Swift classes as well as generating HTML from native Swift classes and attributes.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/SwiftyHTML'
+  s.homepage         = 'https://github.com/drumbart/SwiftyHTML'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Bartosz Tułodziecki' => 'bartosz.tulodziecki@implix.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/SwiftyHTML.git', :tag => s.version.to_s }
+  s.author           = { 'Bartosz Tułodziecki' => 'bartek.tulodziecki@gmail.com' }
+  s.source           = { :git => 'https://github.com/drumbart/SwiftyHTML.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'SwiftyHTML/Classes/**/*'
   
