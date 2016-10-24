@@ -15,7 +15,7 @@ public protocol TagAttribute: StringRepresentable {
 
 extension TagAttribute {
     
-    func stringRepresentation() -> String {
+    public func stringRepresentation() -> String {
         return self.name + "=" + "\(self.value)"
     }
 }

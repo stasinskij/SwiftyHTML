@@ -6,11 +6,11 @@
 //
 //
 
-struct Href: TagAttribute {
-    var name: String = "href"
-    var value: String
+public struct Href: TagAttribute {
+    public var name: String = "href"
+    public var value: String
     
-    init?(value: String) {
+    public init?(value: String) {
         guard let escapedString = value.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return nil }
         self.value = escapedString
     }

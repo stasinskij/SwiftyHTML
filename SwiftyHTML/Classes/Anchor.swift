@@ -6,13 +6,13 @@
 //
 //
 
-struct Anchor: Tag {
-    var name: String = "a"
-    var content: String
-    var range: NSRange
-    var attributes: [TagAttribute]
+public struct Anchor: Tag {
+    public var name: String = "a"
+    public var content: String
+    public var range: NSRange
+    public var attributes: [TagAttribute]
     
-    init(content: String, range: NSRange, attributes: [TagAttribute]) {
+    public init(content: String, range: NSRange, attributes: [TagAttribute]) {
         self.content = content
         self.range = range
         self.attributes = attributes

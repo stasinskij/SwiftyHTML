@@ -17,7 +17,7 @@ public protocol Tag: StringRepresentable {
 
 extension Tag {
     
-    func stringRepresentation() -> String {
+    public func stringRepresentation() -> String {
         return "<\(self.name) \(self.attributes.map{ $0.stringRepresentation() })>\(self.content)</\(self.name)>"
     }
 }

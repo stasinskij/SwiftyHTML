@@ -6,6 +6,6 @@
 //
 //
 
-protocol TagGenerating {
+public protocol TagGenerating {
     func generateTag() -> Tag?
 }
