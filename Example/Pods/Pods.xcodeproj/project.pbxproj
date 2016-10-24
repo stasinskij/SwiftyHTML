@@ -13,6 +13,14 @@
 		90B7D8B382B8B85778CF51CD5FA96A51 /* Pods-SwiftyHTML_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 209ECDA0E91F6D730DDEC1A6778C6E52 /* Pods-SwiftyHTML_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D327C1B94A2D8AAC651D36A01C1CC20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		BAF9D62FC5C2AB4F47BBBC71F325E930 /* Pods-SwiftyHTML_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF835B8281607224C9C44B14884BDE81 /* Pods-SwiftyHTML_Tests-dummy.m */; };
+		BB22B1301DBE33A8009EA6B7 /* AttributedStringParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB22B12F1DBE33A8009EA6B7 /* AttributedStringParser.swift */; };
+		BB22B1331DBE3AD0009EA6B7 /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB22B1321DBE3AD0009EA6B7 /* Anchor.swift */; };
+		BB22B1351DBE3FAC009EA6B7 /* Href.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB22B1341DBE3FAC009EA6B7 /* Href.swift */; };
+		BB22B1381DBE4BF6009EA6B7 /* TagFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB22B1371DBE4BF6009EA6B7 /* TagFactory.swift */; };
+		BB22B13A1DBE4C34009EA6B7 /* TagGenerating.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB22B1391DBE4C34009EA6B7 /* TagGenerating.swift */; };
+		BB22B13C1DBE4CF4009EA6B7 /* AnchorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB22B13B1DBE4CF4009EA6B7 /* AnchorFactory.swift */; };
+		BB22B13E1DBE4E89009EA6B7 /* ParagraphFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB22B13D1DBE4E89009EA6B7 /* ParagraphFactory.swift */; };
+		BB22B1401DBE5143009EA6B7 /* SpanFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB22B13F1DBE5143009EA6B7 /* SpanFactory.swift */; };
 		BB2CE2B81DB7AB81008C7E74 /* NSMutableAttributedString+HTMLConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CE2B51DB7AB81008C7E74 /* NSMutableAttributedString+HTMLConvert.swift */; };
 		BB2CE2BD1DB7B7AD008C7E74 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CE2BA1DB7B7AD008C7E74 /* Tag.swift */; };
 		BB2CE2C11DB7B8AB008C7E74 /* TagAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CE2BE1DB7B8AB008C7E74 /* TagAttribute.swift */; };
@@ -53,6 +61,14 @@
 		A61E62B07955058CF80D32693B8B6896 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B68A436CBC4FF44C0D62BE5199DA69C4 /* Pods_SwiftyHTML_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyHTML_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3999CA4B152BEFD30871C90505A2B9 /* SwiftyHTML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyHTML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB22B12F1DBE33A8009EA6B7 /* AttributedStringParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringParser.swift; sourceTree = "<group>"; };
+		BB22B1321DBE3AD0009EA6B7 /* Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchor.swift; sourceTree = "<group>"; };
+		BB22B1341DBE3FAC009EA6B7 /* Href.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Href.swift; sourceTree = "<group>"; };
+		BB22B1371DBE4BF6009EA6B7 /* TagFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagFactory.swift; sourceTree = "<group>"; };
+		BB22B1391DBE4C34009EA6B7 /* TagGenerating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagGenerating.swift; sourceTree = "<group>"; };
+		BB22B13B1DBE4CF4009EA6B7 /* AnchorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorFactory.swift; sourceTree = "<group>"; };
+		BB22B13D1DBE4E89009EA6B7 /* ParagraphFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParagraphFactory.swift; sourceTree = "<group>"; };
+		BB22B13F1DBE5143009EA6B7 /* SpanFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpanFactory.swift; sourceTree = "<group>"; };
 		BB2CE2B51DB7AB81008C7E74 /* NSMutableAttributedString+HTMLConvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+HTMLConvert.swift"; sourceTree = "<group>"; };
 		BB2CE2BA1DB7B7AD008C7E74 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		BB2CE2BE1DB7B8AB008C7E74 /* TagAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagAttribute.swift; sourceTree = "<group>"; };
@@ -119,8 +135,10 @@
 		400B84CAA51794783425CCD4EA72A72E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BB22B1361DBE4BBB009EA6B7 /* Factories */,
 				BB2CE2B91DB7AD5F008C7E74 /* Models */,
 				BB2CE2B51DB7AB81008C7E74 /* NSMutableAttributedString+HTMLConvert.swift */,
+				BB22B12F1DBE33A8009EA6B7 /* AttributedStringParser.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -199,12 +217,34 @@
 			path = "Target Support Files/Pods-SwiftyHTML_Example";
 			sourceTree = "<group>";
 		};
-		BB2CE2B91DB7AD5F008C7E74 /* Models */ = {
+		BB22B1311DBE3AB3009EA6B7 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				BB2CE2BA1DB7B7AD008C7E74 /* Tag.swift */,
 				BB2CE2BE1DB7B8AB008C7E74 /* TagAttribute.swift */,
 				BB2CE2C21DB7B99E008C7E74 /* StringRepresentable.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		BB22B1361DBE4BBB009EA6B7 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				BB22B1391DBE4C34009EA6B7 /* TagGenerating.swift */,
+				BB22B1371DBE4BF6009EA6B7 /* TagFactory.swift */,
+				BB22B13B1DBE4CF4009EA6B7 /* AnchorFactory.swift */,
+				BB22B13D1DBE4E89009EA6B7 /* ParagraphFactory.swift */,
+				BB22B13F1DBE5143009EA6B7 /* SpanFactory.swift */,
+			);
+			name = Factories;
+			sourceTree = "<group>";
+		};
+		BB2CE2B91DB7AD5F008C7E74 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB22B1311DBE3AB3009EA6B7 /* Protocols */,
+				BB22B1321DBE3AD0009EA6B7 /* Anchor.swift */,
+				BB22B1341DBE3FAC009EA6B7 /* Href.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -365,10 +405,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB22B1381DBE4BF6009EA6B7 /* TagFactory.swift in Sources */,
 				BB2CE2BD1DB7B7AD008C7E74 /* Tag.swift in Sources */,
+				BB22B1331DBE3AD0009EA6B7 /* Anchor.swift in Sources */,
+				BB22B1351DBE3FAC009EA6B7 /* Href.swift in Sources */,
+				BB22B1401DBE5143009EA6B7 /* SpanFactory.swift in Sources */,
 				BB2CE2C11DB7B8AB008C7E74 /* TagAttribute.swift in Sources */,
+				BB22B13C1DBE4CF4009EA6B7 /* AnchorFactory.swift in Sources */,
 				0E0FD9C9CEC73E4DDFACAB1501017928 /* SwiftyHTML-dummy.m in Sources */,
+				BB22B13E1DBE4E89009EA6B7 /* ParagraphFactory.swift in Sources */,
+				BB22B1301DBE33A8009EA6B7 /* AttributedStringParser.swift in Sources */,
 				BB2CE2C51DB7B99E008C7E74 /* StringRepresentable.swift in Sources */,
+				BB22B13A1DBE4C34009EA6B7 /* TagGenerating.swift in Sources */,
 				BB2CE2B81DB7AB81008C7E74 /* NSMutableAttributedString+HTMLConvert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,7 +504,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftyHTML_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftyHTML_Tests/Pods-SwiftyHTML_Tests.modulemap";
@@ -492,7 +540,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftyHTML_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftyHTML_Tests/Pods-SwiftyHTML_Tests.modulemap";
@@ -571,7 +619,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyHTML/SwiftyHTML-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyHTML/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyHTML/SwiftyHTML.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -601,7 +649,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftyHTML_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftyHTML_Example/Pods-SwiftyHTML_Example.modulemap";
@@ -637,7 +685,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftyHTML_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftyHTML_Example/Pods-SwiftyHTML_Example.modulemap";
@@ -673,7 +721,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyHTML/SwiftyHTML-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyHTML/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyHTML/SwiftyHTML.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;

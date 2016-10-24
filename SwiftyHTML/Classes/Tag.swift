@@ -11,4 +11,13 @@ public protocol Tag: StringRepresentable {
     var content: String { get set }
     var range: NSRange { get set }
     var attributes: [TagAttribute] { get set }
+    
+    init(content: String, range: NSRange, attributes: [TagAttribute])
+}
+
+extension Tag {
+    
+    func stringRepresentation() -> String {
+        return "<\(self.name) \(self.attributes.map{ $0.stringRepresentation() })>\(self.content)</\(self.name)>"
+    }
 }

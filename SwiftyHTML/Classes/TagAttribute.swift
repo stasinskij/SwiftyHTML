@@ -9,11 +9,13 @@
 public protocol TagAttribute: StringRepresentable {
     var name: String { get }
     var value: String { get set }
+    
+    init?(value: String)
 }
 
 extension TagAttribute {
     
     func stringRepresentation() -> String {
-        return self.name + "=" + self.value
+        return self.name + "=" + "\(self.value)"
     }
 }

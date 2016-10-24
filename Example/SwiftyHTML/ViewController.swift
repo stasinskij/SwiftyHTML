@@ -7,18 +7,41 @@
 //
 
 import UIKit
+import SwiftyHTML
+import Foundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextViewDelegate {
 
+    @IBOutlet weak var textView: UITextView!
+    
     private lazy var linkString: NSMutableAttributedString = {
-        let str = NSMutableAttributedString(string: "A Google link string")
-        str.addAttribute(NSLinkAttributeName, value: "https://www.google.com", range: NSMakeRange(0, str.length))
+        let prefix = "A "
+        let urlString = "Google link"
+        let suffix = " string"
+        let inputString = NSString(string: prefix + urlString + suffix)
+        
+        let str = NSMutableAttributedString(string: inputString as String)
+        
+        
+        str.addAttribute(NSLinkAttributeName, value: NSURL.init(string: "https://www.google.com"), range: inputString.range(of: urlString, options: .caseInsensitive))
+        str.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: inputString.range(of: prefix, options: .caseInsensitive))
+        str.addAttribute(NSFontAttributeName, value: UIFont.boldSystemFont(ofSize: 24), range: inputString.range(of: suffix, options: .caseInsensitive))
         return str
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.textView.attributedText = self.linkString
+        
+        _ = self.linkString.toHTML()
+    }
+    
+    // MARK: TextView Delegate methods
+    
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
+        UIApplication.shared.openURL(URL)
+        return false
     }
 }
 
