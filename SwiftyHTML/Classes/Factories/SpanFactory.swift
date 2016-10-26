@@ -8,7 +8,7 @@
 
 struct SpanFactory: TagGenerating {
     
-    func generateTag() -> Tag? {
+    func generateTag(content: String, range: NSRange, attributes: [Any]) -> Tag? {
         print("should generate Span tag")
         return nil
     }

@@ -11,6 +11,10 @@ struct TagFactory {
         switch forAttribute {
         case NSLinkAttributeName:
             return AnchorFactory()
+        case NSForegroundColorAttributeName:
+            fallthrough
+        case NSFontAttributeName:
+            return SpanFactory()
         default:
             return ParagraphFactory()
         }

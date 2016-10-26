@@ -6,6 +6,6 @@
 //
 //
 
-public protocol StringRepresentable {
-    func stringRepresentation() -> String
+public protocol HTMLStringRepresentable {
+    func htmlString() -> String
 }

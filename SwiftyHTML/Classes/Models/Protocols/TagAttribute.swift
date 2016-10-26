@@ -6,7 +6,7 @@
 //
 //
 
-public protocol TagAttribute: StringRepresentable {
+public protocol TagAttribute: HTMLStringRepresentable {
     var name: String { get }
     var value: String { get set }
     
@@ -15,7 +15,7 @@ public protocol TagAttribute: StringRepresentable {
 
 extension TagAttribute {
     
-    public func stringRepresentation() -> String {
+    public func htmlString() -> String {
         return self.name + "=" + "\(self.value)"
     }
 }

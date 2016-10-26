@@ -6,7 +6,7 @@
 //
 //
 
-public protocol Tag: StringRepresentable {
+public protocol Tag: HTMLStringRepresentable {
     var name: String { get }
     var content: String { get set }
     var range: NSRange { get set }
@@ -17,7 +17,7 @@ public protocol Tag: StringRepresentable {
 
 extension Tag {
     
-    public func stringRepresentation() -> String {
-        return "<\(self.name) \(self.attributes.map{ $0.stringRepresentation() })>\(self.content)</\(self.name)>"
+    public func htmlString() -> String {
+        return "<\(self.name) \(self.attributes.map{ $0.htmlString() })>\(self.content)</\(self.name)>"
     }
 }
