@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         str.addAttribute(NSFontAttributeName, value: UIFont.boldSystemFont(ofSize: 24), range: inputString.range(of: suffix, options: .caseInsensitive))
         
         let appendedString = NSMutableAttributedString(string: "\nbla bla bla")
-        appendedString.addAttribute(NSFontAttributeName, value: UIFont.italicSystemFont(ofSize: 16), range: NSMakeRange(0, appendedString.length))
+        appendedString.addAttribute(NSFontAttributeName, value: UIFont.init(name: "Palatino-Roman", size: 16.0)!, range: NSMakeRange(0, appendedString.length))
         
         str.append(appendedString)
         return str
@@ -40,6 +40,20 @@ class ViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         
         self.textView.attributedText = self.linkString
+        
+        self.linkString.enumerateAttributes(in: NSMakeRange(0, self.linkString.length), options: .longestEffectiveRangeNotRequired) { (attributes, range, stop) in
+            for (key, attribute) in attributes {
+                if attribute is UIFont {
+                    print((attribute as! UIFont).familyName)
+                    print((attribute as! UIFont).fontName)
+//                    print((attribute as! UIFont).fontDescriptor)
+//                    print((attribute as! UIFont).fontDescriptor.object(forKey: UIFontDescriptorTraitsAttribute))
+                    print("\(attribute) is bold? \((attribute as! UIFont).isBold)")
+                    print("\(attribute) is italic? \((attribute as! UIFont).isItalic)")
+                }
+            }
+        }
+        
         _ = self.linkString.toHTML()
     }
     
