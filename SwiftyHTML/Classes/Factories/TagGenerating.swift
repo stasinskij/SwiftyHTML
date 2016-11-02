@@ -7,5 +7,5 @@
 //
 
 public protocol TagGenerating {
-    func generateTag(content: String, range: NSRange, attributes: [Any]) -> Tag?
+    func generateTag(content: String, range: NSRange, attributes: [String : Any]) -> Tag?
 }

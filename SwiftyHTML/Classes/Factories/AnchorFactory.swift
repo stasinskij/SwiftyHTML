@@ -8,7 +8,7 @@
 
 struct AnchorFactory: TagGenerating {
     
-    func generateTag(content: String, range: NSRange, attributes: [Any]) -> Tag? {
+    func generateTag(content: String, range: NSRange, attributes: [String : Any]) -> Tag? {
         print("should generate Anchor tag")
         return Anchor(content: content, range: range, attributes: [])
     }

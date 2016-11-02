@@ -13,8 +13,6 @@
 		90B7D8B382B8B85778CF51CD5FA96A51 /* Pods-SwiftyHTML_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 209ECDA0E91F6D730DDEC1A6778C6E52 /* Pods-SwiftyHTML_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D327C1B94A2D8AAC651D36A01C1CC20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		BAF9D62FC5C2AB4F47BBBC71F325E930 /* Pods-SwiftyHTML_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF835B8281607224C9C44B14884BDE81 /* Pods-SwiftyHTML_Tests-dummy.m */; };
-		BB1A90871DC35DD3004CCFEF /* TagAttributeGenerating.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1A90861DC35DD3004CCFEF /* TagAttributeGenerating.swift */; };
-		BB1A90891DC35E87004CCFEF /* TagAttributeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1A90881DC35E87004CCFEF /* TagAttributeFactory.swift */; };
 		BB1A908D1DC36FC3004CCFEF /* Span.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1A908C1DC36FC3004CCFEF /* Span.swift */; };
 		BB1A908F1DC370B4004CCFEF /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1A908E1DC370B4004CCFEF /* Style.swift */; };
 		BB1A90911DC39C26004CCFEF /* AttributeValueParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1A90901DC39C26004CCFEF /* AttributeValueParser.swift */; };
@@ -30,6 +28,7 @@
 		BB22B1541DBE5D72009EA6B7 /* Href.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB22B1521DBE5D72009EA6B7 /* Href.swift */; };
 		BB22B1571DBE5D9D009EA6B7 /* NSMutableAttributedString+HTMLConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB22B1561DBE5D9D009EA6B7 /* NSMutableAttributedString+HTMLConvert.swift */; };
 		BB22B15A1DBE5DB1009EA6B7 /* AttributedStringParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB22B1591DBE5DB1009EA6B7 /* AttributedStringParser.swift */; };
+		BB3C50C91DCA395900AADC57 /* UIColor+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3C50C81DCA395900AADC57 /* UIColor+Convenience.swift */; };
 		BBACFFED1DC2255D00F9259A /* UIFont+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBACFFEC1DC2255D00F9259A /* UIFont+Convenience.swift */; };
 		ED85D49C5633EAC9534C2EA47F92C6EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		F564094DD0348B9098D2A12C3D31BA99 /* Pods-SwiftyHTML_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9F652B6C2444D56886D5FBE52AE39ED /* Pods-SwiftyHTML_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -67,8 +66,6 @@
 		A61E62B07955058CF80D32693B8B6896 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B68A436CBC4FF44C0D62BE5199DA69C4 /* Pods_SwiftyHTML_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyHTML_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3999CA4B152BEFD30871C90505A2B9 /* SwiftyHTML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyHTML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB1A90861DC35DD3004CCFEF /* TagAttributeGenerating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagAttributeGenerating.swift; path = Factories/TagAttribute/TagAttributeGenerating.swift; sourceTree = "<group>"; };
-		BB1A90881DC35E87004CCFEF /* TagAttributeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagAttributeFactory.swift; path = Factories/TagAttribute/TagAttributeFactory.swift; sourceTree = "<group>"; };
 		BB1A908C1DC36FC3004CCFEF /* Span.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Span.swift; path = Models/Tags/Span.swift; sourceTree = "<group>"; };
 		BB1A908E1DC370B4004CCFEF /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Style.swift; path = Models/Attributes/Style.swift; sourceTree = "<group>"; };
 		BB1A90901DC39C26004CCFEF /* AttributeValueParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttributeValueParser.swift; path = Parsers/AttributeValueParser.swift; sourceTree = "<group>"; };
@@ -84,6 +81,7 @@
 		BB22B1521DBE5D72009EA6B7 /* Href.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Href.swift; path = Models/Href.swift; sourceTree = "<group>"; };
 		BB22B1561DBE5D9D009EA6B7 /* NSMutableAttributedString+HTMLConvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSMutableAttributedString+HTMLConvert.swift"; path = "Classes/Extensions/NSMutableAttributedString+HTMLConvert.swift"; sourceTree = "<group>"; };
 		BB22B1591DBE5DB1009EA6B7 /* AttributedStringParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttributedStringParser.swift; path = Parsers/AttributedStringParser.swift; sourceTree = "<group>"; };
+		BB3C50C81DCA395900AADC57 /* UIColor+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Convenience.swift"; path = "Classes/Extensions/UIColor+Convenience.swift"; sourceTree = "<group>"; };
 		BBACFFEC1DC2255D00F9259A /* UIFont+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Convenience.swift"; path = "Classes/Extensions/UIFont+Convenience.swift"; sourceTree = "<group>"; };
 		BF835B8281607224C9C44B14884BDE81 /* Pods-SwiftyHTML_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftyHTML_Tests-dummy.m"; sourceTree = "<group>"; };
 		C1463E4CF824856DBE31B1FA2C9FE252 /* SwiftyHTML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyHTML-prefix.pch"; sourceTree = "<group>"; };
@@ -241,15 +239,6 @@
 			name = Tag;
 			sourceTree = "<group>";
 		};
-		BB1A90851DC35D88004CCFEF /* Tag Attribute */ = {
-			isa = PBXGroup;
-			children = (
-				BB1A90861DC35DD3004CCFEF /* TagAttributeGenerating.swift */,
-				BB1A90881DC35E87004CCFEF /* TagAttributeFactory.swift */,
-			);
-			name = "Tag Attribute";
-			sourceTree = "<group>";
-		};
 		BB1A908A1DC36F84004CCFEF /* Tags */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,7 +270,6 @@
 		BB22B1361DBE4BBB009EA6B7 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				BB1A90851DC35D88004CCFEF /* Tag Attribute */,
 				BB1A90841DC35D7F004CCFEF /* Tag */,
 			);
 			name = Factories;
@@ -292,6 +280,7 @@
 			children = (
 				BB22B1561DBE5D9D009EA6B7 /* NSMutableAttributedString+HTMLConvert.swift */,
 				BBACFFEC1DC2255D00F9259A /* UIFont+Convenience.swift */,
+				BB3C50C81DCA395900AADC57 /* UIColor+Convenience.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -477,16 +466,15 @@
 				BB1A908D1DC36FC3004CCFEF /* Span.swift in Sources */,
 				BB22B1481DBE5D55009EA6B7 /* SpanFactory.swift in Sources */,
 				BB22B1491DBE5D55009EA6B7 /* TagFactory.swift in Sources */,
-				BB1A90871DC35DD3004CCFEF /* TagAttributeGenerating.swift in Sources */,
 				BB1A908F1DC370B4004CCFEF /* Style.swift in Sources */,
 				BB22B1571DBE5D9D009EA6B7 /* NSMutableAttributedString+HTMLConvert.swift in Sources */,
+				BB3C50C91DCA395900AADC57 /* UIColor+Convenience.swift in Sources */,
 				BB22B1501DBE5D65009EA6B7 /* TagAttribute.swift in Sources */,
 				BB22B1471DBE5D55009EA6B7 /* ParagraphFactory.swift in Sources */,
 				BB22B14A1DBE5D55009EA6B7 /* TagGenerating.swift in Sources */,
 				BB22B1461DBE5D55009EA6B7 /* AnchorFactory.swift in Sources */,
 				BBACFFED1DC2255D00F9259A /* UIFont+Convenience.swift in Sources */,
 				BB1A90911DC39C26004CCFEF /* AttributeValueParser.swift in Sources */,
-				BB1A90891DC35E87004CCFEF /* TagAttributeFactory.swift in Sources */,
 				0E0FD9C9CEC73E4DDFACAB1501017928 /* SwiftyHTML-dummy.m in Sources */,
 				BB22B1531DBE5D72009EA6B7 /* Anchor.swift in Sources */,
 				BB22B15A1DBE5DB1009EA6B7 /* AttributedStringParser.swift in Sources */,

@@ -7,15 +7,16 @@
 //
 
 struct TagFactory {
-    static func create(forAttribute: String) -> TagGenerating {
-        switch forAttribute {
-        case NSLinkAttributeName:
+    static func factory(attributes: [String : Any]) -> TagGenerating {
+        if attributes.keys.contains(NSLinkAttributeName) {
             return AnchorFactory()
-        case NSForegroundColorAttributeName:
-            fallthrough
-        case NSFontAttributeName:
+        }
+        else if attributes.keys.contains(NSForegroundColorAttributeName) ||
+            attributes.keys.contains(NSFontAttributeName) ||
+            attributes.keys.contains(NSBackgroundColorAttributeName) {
             return SpanFactory()
-        default:
+        }
+        else {
             return ParagraphFactory()
         }
     }

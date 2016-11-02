@@ -8,8 +8,8 @@
 
 struct SpanFactory: TagGenerating {
     
-    func generateTag(content: String, range: NSRange, attributes: [Any]) -> Tag? {
+    func generateTag(content: String, range: NSRange, attributes: [String : Any]) -> Tag? {
         print("should generate Span tag")
-        return nil
+        return Span.init(content: content, range: range, attributes: [])
     }
 }

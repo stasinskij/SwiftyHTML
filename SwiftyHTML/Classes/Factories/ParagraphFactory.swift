@@ -8,7 +8,7 @@
 
 struct ParagraphFactory: TagGenerating {
     
-    func generateTag(content: String, range: NSRange, attributes: [Any]) -> Tag? {
+    func generateTag(content: String, range: NSRange, attributes: [String : Any]) -> Tag? {
         print("should generate Paragraph tag")
         return nil
     }

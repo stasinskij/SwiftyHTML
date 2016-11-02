@@ -23,15 +23,16 @@ class ViewController: UIViewController, UITextViewDelegate {
         let str = NSMutableAttributedString(string: inputString as String)
         
         
-        str.addAttribute(NSLinkAttributeName, value: NSURL.init(string: "https://www.google.com"), range: inputString.range(of: urlString, options: .caseInsensitive))
+        str.addAttribute(NSLinkAttributeName, value: NSURL.init(string: "https://www.google.com")!, range: inputString.range(of: urlString, options: .caseInsensitive))
 //        str.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: inputString.range(of: prefix, options: .caseInsensitive))
         str.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: NSMakeRange(0, 4))
         str.addAttribute(NSFontAttributeName, value: UIFont.boldSystemFont(ofSize: 16), range: NSMakeRange(0, 4))
         str.addAttribute(NSFontAttributeName, value: UIFont.boldSystemFont(ofSize: 24), range: inputString.range(of: suffix, options: .caseInsensitive))
+        str.addAttribute(NSBackgroundColorAttributeName, value: UIColor.green, range: inputString.range(of: suffix, options: .caseInsensitive))
         
         let appendedString = NSMutableAttributedString(string: "\nbla bla bla")
-//        appendedString.addAttribute(NSFontAttributeName, value: UIFont.init(name: "Palatino-Roman", size: 16.0)!, range: NSMakeRange(0, appendedString.length))
-        appendedString.addAttribute(NSFontAttributeName, value: UIFont.italicSystemFont(ofSize: 16.0), range: NSMakeRange(0, appendedString.length))
+        appendedString.addAttribute(NSFontAttributeName, value: UIFont.init(name: "Palatino-Roman", size: 16.0)!, range: NSMakeRange(0, appendedString.length))
+//        appendedString.addAttribute(NSFontAttributeName, value: UIFont.italicSystemFont(ofSize: 16.0), range: NSMakeRange(0, appendedString.length))
         
         str.append(appendedString)
         return str
@@ -43,7 +44,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         self.textView.attributedText = self.linkString
         
         self.linkString.enumerateAttributes(in: NSMakeRange(0, self.linkString.length), options: .longestEffectiveRangeNotRequired) { (attributes, range, stop) in
-            for (key, attribute) in attributes {
+            for (_, attribute) in attributes {
                 if attribute is UIFont {
                     print((attribute as! UIFont).familyName)
                     print((attribute as! UIFont).fontName)
@@ -55,7 +56,8 @@ class ViewController: UIViewController, UITextViewDelegate {
             }
         }
         
-        _ = self.linkString.toHTML()
+        let htmlString = self.linkString.toHTML()
+        print("html string: \(htmlString)")
     }
     
     // MARK: TextView Delegate methods

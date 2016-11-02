@@ -9,15 +9,9 @@
 struct AttributtedStringParser {
     
     func tagWith(string: String, range: NSRange, attributes: [String: Any]) -> Tag? {
-
-        return nil
-    }
-    
-    private func proposedTagWith(attributes: [String : Any]) -> Tag? {
-        if !attributes.keys.contains(NSLinkAttributeName) {
-            return Span.init(content: <#T##String#>, range: <#T##NSRange#>, attributes: <#T##[TagAttribute]#>)
-        }
-        
+        let factory = TagFactory.factory(attributes: attributes)
+        let tag = factory.generateTag(content: string, range: range, attributes: attributes)
+        print("GENERATED TAG: \(tag)")
         return nil
     }
 }
