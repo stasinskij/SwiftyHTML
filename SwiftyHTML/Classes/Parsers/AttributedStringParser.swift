@@ -12,6 +12,6 @@ struct AttributtedStringParser {
         let factory = TagFactory.factory(attributes: attributes)
         let tag = factory.generateTag(content: string, range: range, attributes: attributes)
         print("GENERATED TAG: \(tag)")
-        return nil
+        return tag
     }
 }

@@ -18,6 +18,9 @@ public protocol Tag: HTMLStringRepresentable {
 extension Tag {
     
     public func htmlString() -> String {
-        return "<\(self.name) \(self.attributes.map{ $0.htmlString() })>\(self.content)</\(self.name)>"
+        let appendString: (String, TagAttribute) -> String = { input, atr in
+            input + " " + atr.htmlString()
+        }
+        return "<\(self.name)\(self.attributes.reduce("", appendString))>\(self.content)</\(self.name)>"
     }
 }

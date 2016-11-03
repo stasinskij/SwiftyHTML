@@ -14,8 +14,11 @@ public extension NSMutableAttributedString {
         
         self.enumerateAttributes(in: NSMakeRange(0, self.length), options:.longestEffectiveRangeNotRequired) { (value, range, stop) in
             print("attributes value: \(value) - range: loc \(range.location), len \(range.length)")
-            parser.tagWith(string: String(self.attributedSubstring(from: range).string), range: range, attributes: value)
+            if let tag = parser.tagWith(string: String(self.attributedSubstring(from: range).string), range: range, attributes: value) {
+                outputString.append(tag.htmlString())
+            }
         }
+        
         return outputString
     }
 }
