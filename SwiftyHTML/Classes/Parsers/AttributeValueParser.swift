@@ -20,8 +20,14 @@ struct AttributeValueParser {
                 }
             }
             
+            // This might be refactored... I don't like the idea of assembling font and foreground-color this way...
+            
             if key == NSFontAttributeName {
-                // create style attribute
+                if key == NSFontAttributeName {
+                    if let font = value as? UIFont {
+                        // create style attribute
+                    }
+                }
             }
         }
         
