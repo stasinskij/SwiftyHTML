@@ -9,19 +9,22 @@
 struct StyleAttributeParser {
     
     func parsed(attributes: [String : Any]) -> [TagAttribute] {
-        var parsed = [TagAttribute]()
-        if let fontValue = attributes[NSFontAttributeName] {
-            //
+        var styleAttribute = Style()
+        if let fontValue = attributes[NSFontAttributeName],
+            let font = fontValue as? UIFont {
+            styleAttribute.font = font
         }
         
-        if let foregroundColorValue = attributes[NSForegroundColorAttributeName] {
-            //
+        if let foregroundColorValue = attributes[NSForegroundColorAttributeName],
+            let color = foregroundColorValue as? UIColor {
+            styleAttribute.color = color
         }
         
-        if let backgroundColorValue = attributes[NSBackgroundColorAttributeName] {
-            //
+        if let backgroundColorValue = attributes[NSBackgroundColorAttributeName],
+            let color = backgroundColorValue as? UIColor {
+            styleAttribute.backgroundColor = color
         }
         
-        return parsed
+        return [styleAttribute]
     }
 }

@@ -18,7 +18,7 @@ public struct Style: TagAttribute {
         self.value = value
     }
     
-//    public init(font: UIFont? = nil, color: UIColor? = nil, backgroundColor: UIColor? = nil, textAlignment: NSTextAlignment? = nil) {
-//        
-//    }
+    public init() {
+        self.value = "Test value for style"
+    }
 }
