@@ -13,6 +13,7 @@ import Foundation
 class ViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var webView: UIWebView!
     
     private lazy var linkString: NSMutableAttributedString = {
         let prefix = "A "
@@ -57,6 +58,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         }
         
         let htmlString = self.linkString.toHTML()
+        self.webView.loadHTMLString(htmlString, baseURL: nil)
         print("html string: \(htmlString)")
     }
     

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,21 +27,44 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="bUX-dh-W85"/>
                                 </connections>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TextView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzJ-WA-alk">
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.68627450980000004" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WebView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omG-Tn-u85">
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.81178969140000001" blue="0.0033763239630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOr-9Z-4L9">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ja6-1s-3Oa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="0BU-rT-DGy"/>
-                            <constraint firstItem="ja6-1s-3Oa" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="25" id="6JP-5O-8bU"/>
+                            <constraint firstItem="EOr-9Z-4L9" firstAttribute="top" secondItem="omG-Tn-u85" secondAttribute="bottom" id="PKX-sE-qTW"/>
+                            <constraint firstItem="EOr-9Z-4L9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="RCX-Rz-saL"/>
+                            <constraint firstItem="ja6-1s-3Oa" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" multiplier="0.5" id="S4U-eI-iLn"/>
+                            <constraint firstItem="omG-Tn-u85" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="cTk-cA-W07"/>
+                            <constraint firstItem="ja6-1s-3Oa" firstAttribute="top" secondItem="bzJ-WA-alk" secondAttribute="bottom" id="dhR-8X-Tlx"/>
+                            <constraint firstItem="omG-Tn-u85" firstAttribute="top" secondItem="ja6-1s-3Oa" secondAttribute="bottom" id="e3D-od-uDT"/>
+                            <constraint firstAttribute="trailing" secondItem="EOr-9Z-4L9" secondAttribute="trailing" id="jde-BQ-FnE"/>
                             <constraint firstAttribute="trailing" secondItem="ja6-1s-3Oa" secondAttribute="trailing" id="lA1-JB-xrn"/>
-                            <constraint firstAttribute="bottom" secondItem="ja6-1s-3Oa" secondAttribute="bottom" id="tSd-Cf-lMe"/>
+                            <constraint firstAttribute="bottom" secondItem="EOr-9Z-4L9" secondAttribute="bottom" id="okp-5b-nmo"/>
+                            <constraint firstItem="bzJ-WA-alk" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="pHl-xH-s6q"/>
+                            <constraint firstItem="bzJ-WA-alk" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="sf9-9v-dEU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="textView" destination="ja6-1s-3Oa" id="iDd-GQ-Tm2"/>
+                        <outlet property="webView" destination="EOr-9Z-4L9" id="Pdr-Jg-Jvy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="91.304347826086968"/>
         </scene>
     </scenes>
 </document>
