@@ -32,6 +32,7 @@
 		BBACFFED1DC2255D00F9259A /* UIFont+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBACFFEC1DC2255D00F9259A /* UIFont+Convenience.swift */; };
 		BBC9EB4C1DCCB5E3004EE5DC /* StyleAttributeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9EB4B1DCCB5E3004EE5DC /* StyleAttributeParser.swift */; };
 		BBC9EB4E1DCCB610004EE5DC /* HrefAttributeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9EB4D1DCCB610004EE5DC /* HrefAttributeParser.swift */; };
+		BBC9EB501DCCC217004EE5DC /* String+HTMLConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9EB4F1DCCC217004EE5DC /* String+HTMLConvert.swift */; };
 		ED85D49C5633EAC9534C2EA47F92C6EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		F564094DD0348B9098D2A12C3D31BA99 /* Pods-SwiftyHTML_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9F652B6C2444D56886D5FBE52AE39ED /* Pods-SwiftyHTML_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FFEC721F40B701C88454564B6D00A59E /* SwiftyHTML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD220BFA9D826453A1719C556623F55 /* SwiftyHTML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -87,6 +88,7 @@
 		BBACFFEC1DC2255D00F9259A /* UIFont+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Convenience.swift"; path = "Classes/Extensions/UIFont+Convenience.swift"; sourceTree = "<group>"; };
 		BBC9EB4B1DCCB5E3004EE5DC /* StyleAttributeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleAttributeParser.swift; path = Parsers/StyleAttributeParser.swift; sourceTree = "<group>"; };
 		BBC9EB4D1DCCB610004EE5DC /* HrefAttributeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HrefAttributeParser.swift; path = Parsers/HrefAttributeParser.swift; sourceTree = "<group>"; };
+		BBC9EB4F1DCCC217004EE5DC /* String+HTMLConvert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+HTMLConvert.swift"; path = "Classes/Extensions/String+HTMLConvert.swift"; sourceTree = "<group>"; };
 		BF835B8281607224C9C44B14884BDE81 /* Pods-SwiftyHTML_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftyHTML_Tests-dummy.m"; sourceTree = "<group>"; };
 		C1463E4CF824856DBE31B1FA2C9FE252 /* SwiftyHTML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyHTML-prefix.pch"; sourceTree = "<group>"; };
 		C1684FEF8C221F24CED0DD93ED26EB72 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				BB22B1561DBE5D9D009EA6B7 /* NSMutableAttributedString+HTMLConvert.swift */,
 				BBACFFEC1DC2255D00F9259A /* UIFont+Convenience.swift */,
 				BB3C50C81DCA395900AADC57 /* UIColor+Convenience.swift */,
+				BBC9EB4F1DCCC217004EE5DC /* String+HTMLConvert.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				BBACFFED1DC2255D00F9259A /* UIFont+Convenience.swift in Sources */,
 				BB1A90911DC39C26004CCFEF /* AttributeValueParser.swift in Sources */,
 				0E0FD9C9CEC73E4DDFACAB1501017928 /* SwiftyHTML-dummy.m in Sources */,
+				BBC9EB501DCCC217004EE5DC /* String+HTMLConvert.swift in Sources */,
 				BB22B1531DBE5D72009EA6B7 /* Anchor.swift in Sources */,
 				BB22B15A1DBE5DB1009EA6B7 /* AttributedStringParser.swift in Sources */,
 			);
