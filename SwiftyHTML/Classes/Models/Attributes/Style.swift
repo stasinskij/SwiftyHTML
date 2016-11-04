@@ -9,9 +9,21 @@
 public struct Style: TagAttribute {
     public var name: String = "style"
     public var value: String
-    public var font: UIFont?
-    public var color: UIColor?
-    public var backgroundColor: UIColor?
+    public var font: UIFont? {
+        didSet {
+            self.value = self.computedValue()
+        }
+    }
+    public var color: UIColor? {
+        didSet {
+            self.value = self.computedValue()
+        }
+    }
+    public var backgroundColor: UIColor? {
+        didSet {
+            self.value = self.computedValue()
+        }
+    }
     public var textAlignment: NSTextAlignment?
     
     public init?(value: String) {
@@ -19,6 +31,34 @@ public struct Style: TagAttribute {
     }
     
     public init() {
-        self.value = "Test value for style"
+        self.value = ""
+    }
+    
+    private func computedValue() -> String {
+        var str = ""
+        
+        if let color = self.color, let rgb = color.rgb() {
+            str += "color:rgb(\(rgb.red),\(rgb.green),\(rgb.blue));"
+        }
+        
+        if let bgColor = self.backgroundColor, let rgb = bgColor.rgb() {
+            str += "background-color:rgb(\(rgb.red),\(rgb.green),\(rgb.blue));"
+        }
+        
+        if let font = self.font {
+            str += "font-family:\(font.fontName); font-size:\(Int(font.pointSize))px;"
+            
+            if font.isBold {
+                str += "font-weight:bold"
+            }
+            else if font.isItalic {
+                str += "font-weight:italic"
+            }
+            else {
+                str += "font-weight:normal"
+            }
+        }
+        
+        return str
     }
 }

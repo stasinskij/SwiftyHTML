@@ -31,11 +31,13 @@ class ViewController: UIViewController, UITextViewDelegate {
         str.addAttribute(NSFontAttributeName, value: UIFont.boldSystemFont(ofSize: 24), range: inputString.range(of: suffix, options: .caseInsensitive))
         str.addAttribute(NSBackgroundColorAttributeName, value: UIColor.green, range: inputString.range(of: suffix, options: .caseInsensitive))
         
-        let appendedString = NSMutableAttributedString(string: "\nbla bla bla")
-        appendedString.addAttribute(NSFontAttributeName, value: UIFont.init(name: "Palatino-Roman", size: 16.0)!, range: NSMakeRange(0, appendedString.length))
-//        appendedString.addAttribute(NSFontAttributeName, value: UIFont.italicSystemFont(ofSize: 16.0), range: NSMakeRange(0, appendedString.length))
+        let palatinoString = NSMutableAttributedString(string: "\nthis is Palatino-Roman string")
+        palatinoString.addAttribute(NSFontAttributeName, value: UIFont.init(name: "Palatino-Roman", size: 16.0)!, range: NSMakeRange(0, palatinoString.length))
         
-        str.append(appendedString)
+        str.append(palatinoString)
+        
+        let cleanString = NSMutableAttributedString(string: "\nthis is a string with no attributes")
+        str.append(cleanString)
         return str
     }()
     

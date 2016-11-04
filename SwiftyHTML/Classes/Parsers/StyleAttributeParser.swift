@@ -25,6 +25,6 @@ struct StyleAttributeParser {
             styleAttribute.backgroundColor = color
         }
         
-        return [styleAttribute]
+        return styleAttribute.value != "" ? [styleAttribute] : []
     }
 }

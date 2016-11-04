@@ -16,6 +16,6 @@ public protocol TagAttribute: HTMLStringRepresentable {
 extension TagAttribute {
     
     public func htmlString() -> String {
-        return self.name + "=" + "\(self.value)"
+        return self.name + "=" + "\"\(self.value)\""
     }
 }
