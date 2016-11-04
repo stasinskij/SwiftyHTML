@@ -30,6 +30,8 @@
 		BB22B15A1DBE5DB1009EA6B7 /* AttributedStringParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB22B1591DBE5DB1009EA6B7 /* AttributedStringParser.swift */; };
 		BB3C50C91DCA395900AADC57 /* UIColor+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3C50C81DCA395900AADC57 /* UIColor+Convenience.swift */; };
 		BBACFFED1DC2255D00F9259A /* UIFont+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBACFFEC1DC2255D00F9259A /* UIFont+Convenience.swift */; };
+		BBC9EB4C1DCCB5E3004EE5DC /* StyleAttributeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9EB4B1DCCB5E3004EE5DC /* StyleAttributeParser.swift */; };
+		BBC9EB4E1DCCB610004EE5DC /* HrefAttributeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9EB4D1DCCB610004EE5DC /* HrefAttributeParser.swift */; };
 		ED85D49C5633EAC9534C2EA47F92C6EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		F564094DD0348B9098D2A12C3D31BA99 /* Pods-SwiftyHTML_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9F652B6C2444D56886D5FBE52AE39ED /* Pods-SwiftyHTML_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FFEC721F40B701C88454564B6D00A59E /* SwiftyHTML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD220BFA9D826453A1719C556623F55 /* SwiftyHTML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -83,6 +85,8 @@
 		BB22B1591DBE5DB1009EA6B7 /* AttributedStringParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttributedStringParser.swift; path = Parsers/AttributedStringParser.swift; sourceTree = "<group>"; };
 		BB3C50C81DCA395900AADC57 /* UIColor+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Convenience.swift"; path = "Classes/Extensions/UIColor+Convenience.swift"; sourceTree = "<group>"; };
 		BBACFFEC1DC2255D00F9259A /* UIFont+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Convenience.swift"; path = "Classes/Extensions/UIFont+Convenience.swift"; sourceTree = "<group>"; };
+		BBC9EB4B1DCCB5E3004EE5DC /* StyleAttributeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleAttributeParser.swift; path = Parsers/StyleAttributeParser.swift; sourceTree = "<group>"; };
+		BBC9EB4D1DCCB610004EE5DC /* HrefAttributeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HrefAttributeParser.swift; path = Parsers/HrefAttributeParser.swift; sourceTree = "<group>"; };
 		BF835B8281607224C9C44B14884BDE81 /* Pods-SwiftyHTML_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftyHTML_Tests-dummy.m"; sourceTree = "<group>"; };
 		C1463E4CF824856DBE31B1FA2C9FE252 /* SwiftyHTML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyHTML-prefix.pch"; sourceTree = "<group>"; };
 		C1684FEF8C221F24CED0DD93ED26EB72 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -290,6 +294,8 @@
 			children = (
 				BB22B1591DBE5DB1009EA6B7 /* AttributedStringParser.swift */,
 				BB1A90901DC39C26004CCFEF /* AttributeValueParser.swift */,
+				BBC9EB4B1DCCB5E3004EE5DC /* StyleAttributeParser.swift */,
+				BBC9EB4D1DCCB610004EE5DC /* HrefAttributeParser.swift */,
 			);
 			name = Parsers;
 			sourceTree = "<group>";
@@ -460,7 +466,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC9EB4C1DCCB5E3004EE5DC /* StyleAttributeParser.swift in Sources */,
 				BB22B14F1DBE5D65009EA6B7 /* Tag.swift in Sources */,
+				BBC9EB4E1DCCB610004EE5DC /* HrefAttributeParser.swift in Sources */,
 				BB22B14E1DBE5D65009EA6B7 /* StringRepresentable.swift in Sources */,
 				BB22B1541DBE5D72009EA6B7 /* Href.swift in Sources */,
 				BB1A908D1DC36FC3004CCFEF /* Span.swift in Sources */,

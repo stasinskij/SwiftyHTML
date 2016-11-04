@@ -8,7 +8,7 @@
 
 public protocol TagAttribute: HTMLStringRepresentable {
     var name: String { get }
-    var value: String { get set }
+    var value: String { get }
     
     init?(value: String)
 }

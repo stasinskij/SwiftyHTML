@@ -10,8 +10,8 @@ struct AnchorFactory: TagGenerating {
     
     func generateTag(content: String, range: NSRange, attributes: [String : Any]) -> Tag? {
         print("should generate Anchor tag")
-        let attrParser = AttributeValueParser()
-        let tagAttributes = attrParser.parsed(attributes: attributes)
+        var hrefParser = HrefAttributeParser()
+        let tagAttributes = hrefParser.parsed(attributes: attributes)
         return Anchor(content: content, range: range, attributes: tagAttributes)
     }
 }
