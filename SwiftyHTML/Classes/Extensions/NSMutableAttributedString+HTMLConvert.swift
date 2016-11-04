@@ -13,8 +13,8 @@ public extension NSMutableAttributedString {
         var outputString = ""
         
         self.enumerateAttributes(in: NSMakeRange(0, self.length), options:.longestEffectiveRangeNotRequired) { (value, range, stop) in
-            print("* attributes value: \(value) - range: loc \(range.location), len \(range.length)")
             let substring = String(self.attributedSubstring(from: range).string)!.htmlSanitized()
+            print("* >>\(substring)<< attributes value: \(value) - range: loc \(range.location), len \(range.length)")
             if let tag = parser.tagWith(string: substring, range: range, attributes: value) {
                 outputString.append(tag.htmlString())
             }
@@ -23,6 +23,6 @@ public extension NSMutableAttributedString {
             }
         }
         
-        return outputString
+        return "<span style=\"font-family:apple-system, sans-serif; font-size:14px\">\(outputString)</span>"
     }
 }
