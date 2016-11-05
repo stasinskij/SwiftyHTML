@@ -46,17 +46,25 @@ public struct Style: TagAttribute {
         }
         
         if let font = self.font {
-            str += "font-family:\(font.fontName); font-size:\(Int(font.pointSize))px;"
-            
-            if font.isBold {
-                str += "font-weight:bold"
-            }
-            else if font.isItalic {
-                str += "font-weight:italic"
-            }
-            else {
-                str += "font-weight:normal"
-            }
+            str += self.getFontAttributes(font: font)
+        }
+        
+        return str
+    }
+    
+    private func getFontAttributes(font: UIFont) -> String {
+        var str = ""
+        
+        str += "font-family:\(font.fontName); font-size:\(Int(font.pointSize))px;"
+        
+        if font.isBold {
+            str += "font-weight:bold"
+        }
+        else if font.isItalic {
+            str += "font-weight:italic"
+        }
+        else {
+            str += "font-weight:normal"
         }
         
         return str

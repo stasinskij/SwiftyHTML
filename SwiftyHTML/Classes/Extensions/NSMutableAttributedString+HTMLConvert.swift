@@ -8,7 +8,7 @@
 
 public extension NSMutableAttributedString {
     
-    func toHTML() -> String {
+    func toHTML(defaultStyle: TagAttribute? = nil) -> String {
         let parser = AttributtedStringParser()
         var outputString = ""
         
@@ -23,6 +23,11 @@ public extension NSMutableAttributedString {
             }
         }
         
-        return "<span style=\"font-family:apple-system, sans-serif; font-size:14px\">\(outputString)</span>"
+        if let defStyle = defaultStyle {
+            let span = Span.init(content: outputString, range: NSMakeRange(0, self.length), attributes: [defStyle])
+            return span.htmlString()
+        }
+        
+        return outputString
     }
 }
