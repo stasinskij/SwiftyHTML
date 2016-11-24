@@ -9,13 +9,13 @@
 struct HrefAttributeParser: AttributeValueParser {
     
     func parsed(attributes: [String : Any]) -> [TagAttribute] {
-        // Generate style attribute if abailable
+        // Generate style attribute if available
         var styleAttributes = StyleAttributeParser().parsed(attributes: attributes)
         
         if let urlValue = attributes[NSLinkAttributeName],
             let url = urlValue as? NSURL,
             let absoluteStr = url.absoluteString,
-            let href = Href.init(value:absoluteStr) {
+            let href = SwiftyHTMLConfiguration.hrefClass.init(value:absoluteStr) {
             styleAttributes += [href as! TagAttribute]
         }
         

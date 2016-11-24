@@ -6,9 +6,9 @@
 //
 //
 
-public struct Style: TagAttribute {
+open class Style: TagAttribute {
     public var name: String = "style"
-    public var value: String
+    open var value: String
     public var font: UIFont? {
         didSet {
             self.value = self.computedValue()
@@ -26,7 +26,7 @@ public struct Style: TagAttribute {
     }
     public var textAlignment: NSTextAlignment?
     
-    public init?(value: String) {
+    public required init?(value: String) {
         self.value = value
     }
     

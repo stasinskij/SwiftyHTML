@@ -9,7 +9,7 @@
 struct StyleAttributeParser {
     
     func parsed(attributes: [String : Any]) -> [TagAttribute] {
-        var styleAttribute = Style()
+        let styleAttribute = Style()
         if let fontValue = attributes[NSFontAttributeName],
             let font = fontValue as? UIFont {
             styleAttribute.font = font

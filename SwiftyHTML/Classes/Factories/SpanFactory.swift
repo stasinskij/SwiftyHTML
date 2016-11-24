@@ -11,6 +11,6 @@ struct SpanFactory: TagGenerating {
     func generateTag(content: String, range: NSRange, attributes: [String : Any]) -> Tag? {
         print("should generate Span tag\n")
         let styleAttributes = StyleAttributeParser().parsed(attributes: attributes)
-        return Span.init(content: content, range: range, attributes: styleAttributes)
+        return SwiftyHTMLConfiguration.spanClass.init(value: content, range: range, attributes: styleAttributes)
     }
 }

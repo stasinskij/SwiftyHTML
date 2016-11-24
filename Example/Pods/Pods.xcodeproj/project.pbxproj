@@ -34,6 +34,7 @@
 		BBC9EB4E1DCCB610004EE5DC /* HrefAttributeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9EB4D1DCCB610004EE5DC /* HrefAttributeParser.swift */; };
 		BBC9EB501DCCC217004EE5DC /* String+HTMLConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9EB4F1DCCC217004EE5DC /* String+HTMLConvert.swift */; };
 		ED85D49C5633EAC9534C2EA47F92C6EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		F050F039907A7EE3F00D720C /* SwiftyHTMLConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050FB158B51ECFF02B48685 /* SwiftyHTMLConfiguration.swift */; };
 		F564094DD0348B9098D2A12C3D31BA99 /* Pods-SwiftyHTML_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9F652B6C2444D56886D5FBE52AE39ED /* Pods-SwiftyHTML_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FFEC721F40B701C88454564B6D00A59E /* SwiftyHTML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD220BFA9D826453A1719C556623F55 /* SwiftyHTML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -99,6 +100,7 @@
 		E11C09C20B174285E4D6AA7A2BFD7712 /* Pods-SwiftyHTML_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyHTML_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E953C9EF971279D694DF8C738DDC9388 /* Pods-SwiftyHTML_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftyHTML_Tests.modulemap"; sourceTree = "<group>"; };
 		ECD2D3DD2F0707FB7C675FC0AA097914 /* SwiftyHTML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyHTML-dummy.m"; sourceTree = "<group>"; };
+		F050FB158B51ECFF02B48685 /* SwiftyHTMLConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyHTMLConfiguration.swift; path = Configuration/SwiftyHTMLConfiguration.swift; sourceTree = "<group>"; };
 		F150F306FF20602C7D7F458BA96453F7 /* Pods-SwiftyHTML_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyHTML_Example-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 				BB22B1581DBE5DA4009EA6B7 /* Parsers */,
 				BB22B1361DBE4BBB009EA6B7 /* Factories */,
 				BB2CE2B91DB7AD5F008C7E74 /* Models */,
+				F050FF38FD122081C6D6A150 /* Configuration */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -335,6 +338,14 @@
 			path = "Example/Pods/Target Support Files/SwiftyHTML";
 			sourceTree = "<group>";
 		};
+		F050FF38FD122081C6D6A150 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F050FB158B51ECFF02B48685 /* SwiftyHTMLConfiguration.swift */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
 		F853594837D0A830269BA98A165424A9 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,6 +501,7 @@
 				BBC9EB501DCCC217004EE5DC /* String+HTMLConvert.swift in Sources */,
 				BB22B1531DBE5D72009EA6B7 /* Anchor.swift in Sources */,
 				BB22B15A1DBE5DB1009EA6B7 /* AttributedStringParser.swift in Sources */,
+				F050F039907A7EE3F00D720C /* SwiftyHTMLConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

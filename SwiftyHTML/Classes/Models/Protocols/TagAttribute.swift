@@ -11,6 +11,7 @@ public protocol TagAttribute: HTMLStringRepresentable {
     var value: String { get }
     
     init?(value: String)
+    func htmlString() -> String
 }
 
 extension TagAttribute {

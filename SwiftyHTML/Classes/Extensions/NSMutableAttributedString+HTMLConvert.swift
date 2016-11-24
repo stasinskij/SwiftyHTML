@@ -24,7 +24,7 @@ public extension NSMutableAttributedString {
         }
         
         if let defStyle = defaultStyle {
-            let span = Span.init(content: outputString, range: NSMakeRange(0, self.length), attributes: [defStyle])
+            let span = Span.init(value: outputString, range: NSMakeRange(0, self.length), attributes: [defStyle])
             return span.htmlString()
         }
         

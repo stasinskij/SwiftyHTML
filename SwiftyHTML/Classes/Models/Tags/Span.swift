@@ -6,14 +6,14 @@
 //
 //
 
-public struct Span: Tag {
+open class Span: Tag {
     public var name: String = "span"
-    public var content: String
-    public var range: NSRange
-    public var attributes: [TagAttribute]
+    open var value: String
+    open var range: NSRange
+    open var attributes: [TagAttribute]
     
-    public init(content: String, range: NSRange, attributes: [TagAttribute]) {
-        self.content = content
+    public required init(value: String, range: NSRange, attributes: [TagAttribute]) {
+        self.value = value
         self.range = range
         self.attributes = attributes
     }

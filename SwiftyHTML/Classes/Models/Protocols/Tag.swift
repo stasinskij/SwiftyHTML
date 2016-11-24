@@ -8,11 +8,11 @@
 
 public protocol Tag: HTMLStringRepresentable {
     var name: String { get }
-    var content: String { get set }
+    var value: String { get set }
     var range: NSRange { get set }
     var attributes: [TagAttribute] { get set }
     
-    init(content: String, range: NSRange, attributes: [TagAttribute])
+    init(value: String, range: NSRange, attributes: [TagAttribute])
 }
 
 extension Tag {
@@ -21,6 +21,6 @@ extension Tag {
         let appendAttribute: (String, TagAttribute) -> String = { input, atr in
             input + " " + atr.htmlString()
         }
-        return "<\(self.name)\(self.attributes.reduce("", appendAttribute))>\(self.content)</\(self.name)>"
+        return "<\(self.name)\(self.attributes.reduce("", appendAttribute))>\(self.value)</\(self.name)>"
     }
 }

@@ -6,12 +6,18 @@
 //
 //
 
-public struct Href: TagAttribute {
+open class Href: TagAttribute {
     public var name: String = "href"
-    public var value: String
+    open var value: String
     
-    public init?(value: String) {
+    public required init?(value: String) {
         guard let escapedString = value.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return nil }
         self.value = escapedString
+    }
+
+    // This needs to be implemented so that a subclass can override it.
+    // Default TagAttribute implementation used otherwise.
+    open func htmlString() -> String {
+        return self.name + "=" + "\"\(self.value)\""
     }
 }
