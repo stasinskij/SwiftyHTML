@@ -18,10 +18,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.textView.attributedText = TestHtml.multipleAttributesStringWithLink
+        self.textView.attributedText = TestAttributedStrings.multipleAttributesStringWithLink
         
         let defaultStyle = Style.init(value: "font-family:apple-system, sans-serif; font-size:14px")
-        let htmlString = TestHtml.multipleAttributesStringWithLink.toHTML(defaultStyle: defaultStyle)
+        let htmlString = TestAttributedStrings.multipleAttributesStringWithLink.toHTML(defaultStyle: defaultStyle)
         self.webView.loadHTMLString(htmlString, baseURL: nil)
         print("html string: \(htmlString)")
     }

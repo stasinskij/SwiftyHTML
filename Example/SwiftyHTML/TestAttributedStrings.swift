@@ -1,5 +1,5 @@
 //
-//  TestHTML.swift
+//  TestAttributedStrings.swift
 //  SwiftyHTML
 //
 //  Created by Bartosz Tułodziecki on 02/12/2016.
@@ -8,16 +8,19 @@
 
 import UIKit
 
-class TestHtml {
+class TestAttributedStrings {
     
-    static var multipleAttributesStringWithLink: NSMutableAttributedString = {
+    static let stringWithLink: NSMutableAttributedString = {
+        return NSMutableAttributedString(string: "A Google link", attributes: [NSLinkAttributeName : NSURL.init(string: "https://www.google.com")!])
+    }()
+    
+    static let multipleAttributesStringWithLink: NSMutableAttributedString = {
         let prefix = "A "
         let urlString = "Google link"
         let suffix = " string"
         let inputString = NSString(string: prefix + urlString + suffix)
         
         let str = NSMutableAttributedString(string: inputString as String)
-        
         
         str.addAttribute(NSLinkAttributeName, value: NSURL.init(string: "https://www.google.com")!, range: inputString.range(of: urlString, options: .caseInsensitive))
         str.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: NSMakeRange(0, 4))
