@@ -6,9 +6,11 @@
 //
 //
 
-struct StyleAttributeParser {
+import UIKit
+
+public struct StyleAttributeParser {
     
-    func parsed(attributes: [String : Any]) -> [TagAttribute] {
+    public func parsed(attributes: [String : Any]) -> [TagAttribute] {
         let styleAttribute = Style()
         if let fontValue = attributes[NSFontAttributeName],
             let font = fontValue as? UIFont {

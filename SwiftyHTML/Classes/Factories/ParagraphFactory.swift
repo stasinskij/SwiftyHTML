@@ -6,9 +6,11 @@
 //
 //
 
-struct ParagraphFactory: TagGenerating {
+import Foundation
+
+public struct ParagraphFactory: TagGenerating {
     
-    func generateTag(content: String, range: NSRange, attributes: [String : Any]) -> Tag? {
+    public func generateTag(content: String, range: NSRange, attributes: [String : Any]) -> Tag? {
         print("should generate Paragraph tag\n")
         return nil
     }

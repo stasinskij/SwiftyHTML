@@ -6,6 +6,6 @@
 //
 //
 
-protocol AttributeValueParser {
+public protocol AttributeValueParser {
     func parsed(attributes: [String : Any]) -> [TagAttribute]
 }

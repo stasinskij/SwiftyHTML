@@ -6,9 +6,11 @@
 //
 //
 
-struct AnchorFactory: TagGenerating {
+import Foundation
+
+public struct AnchorFactory: TagGenerating {
     
-    func generateTag(content: String, range: NSRange, attributes: [String : Any]) -> Tag? {
+    public func generateTag(content: String, range: NSRange, attributes: [String : Any]) -> Tag? {
         print("should generate Anchor tag\n")
         let tagAttributes = HrefAttributeParser().parsed(attributes: attributes)
         return SwiftyHTMLConfiguration.anchorClass.init(value: content, range: range, attributes: tagAttributes)

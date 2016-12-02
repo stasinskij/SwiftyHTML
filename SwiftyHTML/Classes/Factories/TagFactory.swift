@@ -6,8 +6,11 @@
 //
 //
 
-struct TagFactory {
-    static func factory(attributes: [String : Any]) -> TagGenerating {
+import UIKit
+
+public struct TagFactory {
+    
+    public static func factory(attributes: [String : Any]) -> TagGenerating {
         if attributes.keys.contains(NSLinkAttributeName) {
             return AnchorFactory()
         }
