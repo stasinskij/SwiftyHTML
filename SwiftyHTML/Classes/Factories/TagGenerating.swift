@@ -6,6 +6,8 @@
 //
 //
 
+import Foundation
+
 public protocol TagGenerating {
     func generateTag(content: String, range: NSRange, attributes: [String : Any]) -> Tag?
 }

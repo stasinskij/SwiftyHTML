@@ -6,9 +6,11 @@
 //
 //
 
-struct HrefAttributeParser: AttributeValueParser {
+import UIKit
+
+public struct HrefAttributeParser: AttributeValueParser {
     
-    func parsed(attributes: [String : Any]) -> [TagAttribute] {
+    public func parsed(attributes: [String : Any]) -> [TagAttribute] {
         // Generate style attribute if available
         var styleAttributes = StyleAttributeParser().parsed(attributes: attributes)
         

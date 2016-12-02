@@ -10,7 +10,15 @@ import UIKit
 
 class TestAttributedStrings {
     
-    static let stringWithLink: NSMutableAttributedString = {
+    static let stringWithNoAttributes: NSMutableAttributedString = {
+        return NSMutableAttributedString(string: "plain string")
+    }()
+    
+    static let stringWithBlueColorAttribute: NSMutableAttributedString = {
+        return NSMutableAttributedString(string: "blue string", attributes: [NSForegroundColorAttributeName : UIColor.blue])
+    }()
+    
+    static let stringWithLinkAttribute: NSMutableAttributedString = {
         return NSMutableAttributedString(string: "A Google link", attributes: [NSLinkAttributeName : NSURL.init(string: "https://www.google.com")!])
     }()
     
