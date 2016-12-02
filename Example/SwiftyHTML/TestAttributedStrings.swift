@@ -22,7 +22,7 @@ class TestAttributedStrings {
         return NSMutableAttributedString(string: "A Google link", attributes: [NSLinkAttributeName : NSURL.init(string: "https://www.google.com")!])
     }()
     
-    static let multipleAttributesStringWithLink: NSMutableAttributedString = {
+    static let stringWithMultipleAttributes: NSMutableAttributedString = {
         let prefix = "A "
         let urlString = "Google link"
         let suffix = " string"
