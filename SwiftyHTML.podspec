@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftyHTML'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A delightful framework for converting HTML to native Swift classes.'
 
 # This description is used to generate tags and improve search results.
@@ -40,5 +40,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'Foundation'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'SwiftSoup'
 end
