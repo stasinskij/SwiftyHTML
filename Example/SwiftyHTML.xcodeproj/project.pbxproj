@@ -17,6 +17,8 @@
 		BB2CE2B41DB78940008C7E74 /* BasicHTMLDocument.html in Resources */ = {isa = PBXBuildFile; fileRef = BB2CE2B31DB78940008C7E74 /* BasicHTMLDocument.html */; };
 		BBA84F2C1DF1727F0063A771 /* TestAttributedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA84F2B1DF1727F0063A771 /* TestAttributedStrings.swift */; };
 		BBA84F2D1DF1727F0063A771 /* TestAttributedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA84F2B1DF1727F0063A771 /* TestAttributedStrings.swift */; };
+		BBDCB1471DF819AF006B966E /* AndroidHTML.html in Resources */ = {isa = PBXBuildFile; fileRef = BBDCB1461DF819AF006B966E /* AndroidHTML.html */; };
+		BBDCB1481DF819AF006B966E /* AndroidHTML.html in Resources */ = {isa = PBXBuildFile; fileRef = BBDCB1461DF819AF006B966E /* AndroidHTML.html */; };
 		C95E90E6A749986A80562D5B /* Pods_SwiftyHTML_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14493667D4BA04F7705884BD /* Pods_SwiftyHTML_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,7 @@
 		B92479FCB7E32076A635DA79 /* Pods-SwiftyHTML_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyHTML_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyHTML_Tests/Pods-SwiftyHTML_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB2CE2B31DB78940008C7E74 /* BasicHTMLDocument.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BasicHTMLDocument.html; sourceTree = "<group>"; };
 		BBA84F2B1DF1727F0063A771 /* TestAttributedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAttributedStrings.swift; sourceTree = "<group>"; };
+		BBDCB1461DF819AF006B966E /* AndroidHTML.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = AndroidHTML.html; sourceTree = "<group>"; };
 		C2E6AF3F0C93D1D03C07A518 /* SwiftyHTML.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftyHTML.podspec; path = ../SwiftyHTML.podspec; sourceTree = "<group>"; };
 		CE593A7DF3E94B9C4E8367F8 /* Pods-SwiftyHTML_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyHTML_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyHTML_Example/Pods-SwiftyHTML_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CFB3922A81E08139AB1D8452 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				BB2CE2B31DB78940008C7E74 /* BasicHTMLDocument.html */,
+				BBDCB1461DF819AF006B966E /* AndroidHTML.html */,
 				BBA84F2B1DF1727F0063A771 /* TestAttributedStrings.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
@@ -258,6 +262,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				BBDCB1471DF819AF006B966E /* AndroidHTML.html in Resources */,
 				BB2CE2B41DB78940008C7E74 /* BasicHTMLDocument.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDCB1481DF819AF006B966E /* AndroidHTML.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

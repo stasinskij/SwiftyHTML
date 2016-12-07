@@ -50,6 +50,14 @@ class ViewController: UIViewController {
                 print("span attribute: \(attribute.getKey()) value: \(attribute.getValue())")
             }
         }
+        
+        print("/////")
+        let children = doc.children().array()
+        for child in children {
+            for subchild in child.children().array() {
+                print("subchild: \(subchild)")
+            }
+        }
     }
 }
 
