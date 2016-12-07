@@ -1,15 +1,15 @@
 //
-//  Span.swift
+//  Div.swift
 //  Pods
 //
-//  Created by Bartosz Tułodziecki on 28/10/2016.
+//  Created by Bartosz Tułodziecki on 07/12/2016.
 //
 //
 
 import Foundation
 
-open class Span: Tag {
-    public var name: String = "span"
+open class Div: Tag {
+    public var name: String = "div"
     open var value: String
     open var range: NSRange
     open var attributes: [TagAttribute]
