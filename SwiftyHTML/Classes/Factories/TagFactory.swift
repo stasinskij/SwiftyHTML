@@ -23,4 +23,15 @@ public struct TagFactory {
             return ParagraphFactory()
         }
     }
+    
+    public static func factory(htmlTag: String) -> TagGenerating {
+        switch htmlTag {
+        case "a":
+            return AnchorFactory()
+        case "span":
+            return SpanFactory()
+        default:
+            return ParagraphFactory()
+        }
+    }
 }

@@ -9,7 +9,6 @@
 import Foundation
 
 public struct AnchorFactory: TagGenerating {
-    
     public func generateTag(content: String, range: NSRange, attributes: [String : Any]) -> Tag? {
         print("should generate Anchor tag\n")
         let tagAttributes = HrefAttributeParser().parsed(attributes: attributes)

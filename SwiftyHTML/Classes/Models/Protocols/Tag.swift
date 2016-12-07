@@ -12,6 +12,8 @@ public protocol Tag: HTMLStringRepresentable {
     var range: NSRange { get set }
     var attributes: [TagAttribute] { get set }
     
+    var attributedString: NSMutableAttributedString? { get }
+    
     init(value: String, range: NSRange, attributes: [TagAttribute])
 }
 

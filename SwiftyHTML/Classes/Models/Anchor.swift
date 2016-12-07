@@ -12,6 +12,11 @@ open class Anchor: Tag {
     open var range: NSRange
     open var attributes: [TagAttribute]
     
+    public var attributedString: NSMutableAttributedString? {
+        return NSMutableAttributedString(string: self.value, attributes: [NSUnderlineStyleAttributeName : NSUnderlineStyle.styleSingle.rawValue,
+                                                                          NSForegroundColorAttributeName : UIColor.blue])
+    }
+    
     public required init(value: String, range: NSRange, attributes: [TagAttribute]) {
         self.value = value
         self.range = range
