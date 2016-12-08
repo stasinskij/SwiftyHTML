@@ -9,7 +9,6 @@
 import UIKit
 import SwiftyHTML
 import Foundation
-import SwiftSoup
 
 class ViewController: UIViewController {
 
@@ -30,7 +29,7 @@ class ViewController: UIViewController {
 //        let htmlFile = Bundle.main.url(forResource: "AndroidHTML", withExtension: "html")!
         let htmlFile = Bundle.main.url(forResource: "GRHTMLtemplate", withExtension: "html")!
         let contents = try! String(contentsOf: htmlFile, encoding: .utf8)
-        print("contents: \(contents)")
+//        print("contents: \(contents)")
         
         let htmlData = contents.data(using: .utf8)!
         if let str = try? NSAttributedString.init(data: htmlData, options: [NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType], documentAttributes: nil) {
@@ -42,41 +41,6 @@ class ViewController: UIViewController {
             let mutableStr = NSMutableAttributedString.init(attributedString: str).toHTML()
             self.webView.loadHTMLString(mutableStr, baseURL: nil)
         }
-        
-//        let doc = try! SwiftSoup.parse(contents)
-//        print("soup: \(doc)")
-//        let links = try! doc.getElementsByTag("a")
-//        print("link element: \(links)")
-//        for link in links.array() {
-//            let attributes = link.getAttributes()
-//            for attribute in attributes!.asList() {
-//                print("link attribute: \(attribute.getKey()) value: \(attribute.getValue())")
-//            }
-//        }
-//        
-//        let spans = try! doc.getElementsByTag("span")
-//        print("spans: \(spans)")
-//        for span in spans.array() {
-//            let attributes = span.getAttributes()
-//            for attribute in attributes!.asList() {
-//                print("span attribute: \(attribute.getKey()) value: \(attribute.getValue())")
-//            }
-//        }
-//        
-//        print("1 ./////")
-//        if let body = doc.body() {
-//            _ = try! body.traverse(HTMLNodeVisitor())
-//            print("2 ./////")
-//            for textNode in body.textNodes() {
-//                print("text node: \(textNode)")
-//            }
-//            
-//            print("3 ./////")
-//            let htmlData = contents.data(using: .utf8)!
-//            if let str = try? NSAttributedString.init(data: htmlData, options: [NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType], documentAttributes: nil) {
-//                print(str)
-//            }
-//        }
     }
 }
 
