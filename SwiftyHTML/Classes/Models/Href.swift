@@ -10,6 +10,10 @@ open class Href: TagAttribute {
     public var name: String = "href"
     open var value: String
     
+    public var attributedString: NSMutableAttributedString? {
+        return NSMutableAttributedString(string: self.value, attributes: [NSLinkAttributeName : self.value])
+    }
+    
     public required init?(value: String) {
         guard let escapedString = value.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return nil }
         self.value = escapedString
