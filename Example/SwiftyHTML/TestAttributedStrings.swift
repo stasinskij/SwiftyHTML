@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyHTML
 
 class TestAttributedStrings {
     
@@ -20,6 +21,12 @@ class TestAttributedStrings {
     
     static let stringWithLinkAttribute: NSMutableAttributedString = {
         return NSMutableAttributedString(string: "A Google link", attributes: [NSLinkAttributeName : NSURL.init(string: "https://www.google.com")!])
+    }()
+    
+    static let stringWithLinkAndAltAttribute: NSMutableAttributedString = {
+        let linkString = TestAttributedStrings.stringWithLinkAttribute
+        linkString.addAttribute(Alt.AltAttributeName, value: "TestAltValue", range: NSMakeRange(0, linkString.length))
+        return linkString
     }()
     
     static let stringWithMultipleAttributes: NSMutableAttributedString = {

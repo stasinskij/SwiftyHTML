@@ -5,6 +5,7 @@ import SwiftyHTML
 class TagTests: XCTestCase {
     
     private let linkString = TestAttributedStrings.stringWithLinkAttribute
+    private let linkWithAltString = TestAttributedStrings.stringWithLinkAndAltAttribute
     private let blueColorString = TestAttributedStrings.stringWithBlueColorAttribute
     private let noAttributesString = TestAttributedStrings.stringWithNoAttributes
     
@@ -48,6 +49,17 @@ class TagTests: XCTestCase {
                                                     range: NSMakeRange(0, self.blueColorString.length),
                                                     attributes: self.blueColorString.attributes(at: 0, effectiveRange: nil))
         XCTAssertTrue(tag is Span, "Expected Span, created \(tag) instead.")
+    }
+    
+    func testShouldCreateAnchorWithAltTag() {
+        let tag = AttributtedStringParser().tagWith(string: self.linkWithAltString.string,
+                                                    range: NSMakeRange(0, self.linkWithAltString.length),
+                                                    attributes: self.linkWithAltString.attributes(at: 0, effectiveRange: nil))
+        XCTAssertNotNil(tag, "Expected Anchor tag, got nil.")
+        XCTAssertTrue(tag is Anchor, "Expected Anchor, created \(tag) instead.")
+        
+        let altAtrtibute = tag?.attributes.first{ $0.name == "alt" }
+        XCTAssertNotNil(altAtrtibute, "Expected Alt tag attribute, got nil.")
     }
     
     func testShouldCreateSpanTagAtSpecifiedRange() {

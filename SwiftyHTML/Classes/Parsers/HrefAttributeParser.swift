@@ -21,6 +21,11 @@ public struct HrefAttributeParser: AttributeValueParser {
             styleAttributes += [href as! TagAttribute]
         }
         
+        if let altValue = attributes[Alt.AltAttributeName] as? String {
+            let alt = Alt.init(value: altValue)
+            styleAttributes += [alt as! TagAttribute]
+        }
+        
         return styleAttributes
     }
 }
