@@ -26,8 +26,8 @@ class ViewController: UIViewController {
 //        print("html string: \(htmlString)")
         
         // Test
-//        let htmlFile = Bundle.main.url(forResource: "AndroidHTML", withExtension: "html")!
-        let htmlFile = Bundle.main.url(forResource: "GRHTMLtemplate", withExtension: "html")!
+        let htmlFile = Bundle.main.url(forResource: "AndroidHTML", withExtension: "html")!
+//        let htmlFile = Bundle.main.url(forResource: "GRHTMLtemplate", withExtension: "html")!
         let contents = try! String(contentsOf: htmlFile, encoding: .utf8)
 //        print("contents: \(contents)")
         
