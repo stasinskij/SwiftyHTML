@@ -10,10 +10,12 @@ import UIKit
 import SwiftyHTML
 import Foundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, XMLParserDelegate {
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var webView: UIWebView!
+    
+    private var xmlParser: XMLParser! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +27,12 @@ class ViewController: UIViewController {
 //        self.webView.loadHTMLString(htmlString, baseURL: nil)
 //        print("html string: \(htmlString)")
         
+        
         // Test
         let htmlFile = Bundle.main.url(forResource: "AndroidHTML", withExtension: "html")!
 //        let htmlFile = Bundle.main.url(forResource: "GRHTMLtemplate", withExtension: "html")!
         let contents = try! String(contentsOf: htmlFile, encoding: .utf8)
-//        print("contents: \(contents)")
+        print("contents: \(contents)")
         
         let htmlData = contents.data(using: .utf8)!
         if let str = try? NSAttributedString.init(data: htmlData, options: [NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType], documentAttributes: nil) {
@@ -41,6 +44,33 @@ class ViewController: UIViewController {
             let mutableStr = NSMutableAttributedString.init(attributedString: str).toHTML()
             self.webView.loadHTMLString(mutableStr, baseURL: nil)
         }
+        
+        
+        self.xmlParser = XMLParser(data: htmlData)
+        self.xmlParser.delegate = self
+        self.xmlParser.parse()
+    }
+    
+    // MARK: - XML parser delegate
+    
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+        print("did start element: \(elementName), qualified name: \(qName), attributes: \(attributeDict)")
+    }
+    
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        print("did end element: \(elementName)")
+    }
+    
+    func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
+        print("ERROR: \(parseError)")
+    }
+    
+    func parserDidStartDocument(_ parser: XMLParser) {
+        print("did start parsing")
+    }
+    
+    func parserDidEndDocument(_ parser: XMLParser) {
+        print("did end parsing")
     }
 }
 

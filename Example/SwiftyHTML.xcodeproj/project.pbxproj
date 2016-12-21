@@ -16,6 +16,7 @@
 		8D0284A263B2A6DC8461C77E /* Pods_SwiftyHTML_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0CCD6B939B1C42BA0520BB /* Pods_SwiftyHTML_Tests.framework */; };
 		BB21781B1DF85B9B00749033 /* GRHTMLtemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = BB21781A1DF85B9B00749033 /* GRHTMLtemplate.html */; };
 		BB2CE2B41DB78940008C7E74 /* BasicHTMLDocument.html in Resources */ = {isa = PBXBuildFile; fileRef = BB2CE2B31DB78940008C7E74 /* BasicHTMLDocument.html */; };
+		BB9BA7381E09851A009AC80F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9BA7371E09851A009AC80F /* libxml2.tbd */; };
 		BBA84F2C1DF1727F0063A771 /* TestAttributedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA84F2B1DF1727F0063A771 /* TestAttributedStrings.swift */; };
 		BBA84F2D1DF1727F0063A771 /* TestAttributedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA84F2B1DF1727F0063A771 /* TestAttributedStrings.swift */; };
 		BBDCB1471DF819AF006B966E /* AndroidHTML.html in Resources */ = {isa = PBXBuildFile; fileRef = BBDCB1461DF819AF006B966E /* AndroidHTML.html */; };
@@ -52,6 +53,7 @@
 		B92479FCB7E32076A635DA79 /* Pods-SwiftyHTML_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyHTML_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyHTML_Tests/Pods-SwiftyHTML_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB21781A1DF85B9B00749033 /* GRHTMLtemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = GRHTMLtemplate.html; sourceTree = "<group>"; };
 		BB2CE2B31DB78940008C7E74 /* BasicHTMLDocument.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BasicHTMLDocument.html; sourceTree = "<group>"; };
+		BB9BA7371E09851A009AC80F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		BBA84F2B1DF1727F0063A771 /* TestAttributedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAttributedStrings.swift; sourceTree = "<group>"; };
 		BBDCB1461DF819AF006B966E /* AndroidHTML.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = AndroidHTML.html; sourceTree = "<group>"; };
 		C2E6AF3F0C93D1D03C07A518 /* SwiftyHTML.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftyHTML.podspec; path = ../SwiftyHTML.podspec; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB9BA7381E09851A009AC80F /* libxml2.tbd in Frameworks */,
 				C95E90E6A749986A80562D5B /* Pods_SwiftyHTML_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +170,7 @@
 		8B8150D8D471D3C9AAE6D6D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BB9BA7371E09851A009AC80F /* libxml2.tbd */,
 				14493667D4BA04F7705884BD /* Pods_SwiftyHTML_Example.framework */,
 				8F0CCD6B939B1C42BA0520BB /* Pods_SwiftyHTML_Tests.framework */,
 			);
