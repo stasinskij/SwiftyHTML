@@ -25,28 +25,30 @@ class ViewController: UIViewController {
 //        print("html string: \(htmlString)")
         
         // Test
-//        let htmlFile = Bundle.main.url(forResource: "AndroidHTML", withExtension: "html")!
-        let htmlFile = Bundle.main.url(forResource: "GRHTMLtemplate", withExtension: "html")!
+        let htmlFile = Bundle.main.url(forResource: "AndroidHTML", withExtension: "html")!
+//        let htmlFile = Bundle.main.url(forResource: "GRHTMLtemplate", withExtension: "html")!
         let contents = try! String(contentsOf: htmlFile, encoding: .utf8)
-//        print("contents: \(contents)")
+        print("contents: \(contents)")
+
+        let htmlData = contents.data(using: .utf8)!
         
         // Testing HTMLParser with Kanna
         let parser = HTMLParser()
-        if parser.parsed(html: contents) {
-            print("parsed html...")
+        if let parsedHtml = parser.parsed(htmlData: htmlData) {
+            self.webView.loadHTMLString(parsedHtml, baseURL: nil)
         }
         
         
-        let htmlData = contents.data(using: .utf8)!
-        if let str = try? NSAttributedString.init(data: htmlData, options: [NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType], documentAttributes: nil) {
-            print(str)
-            self.textView.attributedText = str
-            // Original HTML
-            self.webView.loadHTMLString(contents, baseURL: nil)
-            // Generated HTML from NSMutableAttributedString
-            let mutableStr = NSMutableAttributedString.init(attributedString: str).toHTML()
-            self.webView.loadHTMLString(mutableStr, baseURL: nil)
-        }
+//        let htmlData = contents.data(using: .utf8)!
+//        if let str = try? NSAttributedString.init(data: htmlData, options: [NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType], documentAttributes: nil) {
+//            print(str)
+//            self.textView.attributedText = str
+//            // Original HTML
+//            self.webView.loadHTMLString(contents, baseURL: nil)
+//            // Generated HTML from NSMutableAttributedString
+//            let mutableStr = NSMutableAttributedString.init(attributedString: str).toHTML()
+//            self.webView.loadHTMLString(mutableStr, baseURL: nil)
+//        }
     }
 }
 
