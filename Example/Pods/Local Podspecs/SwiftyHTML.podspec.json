@@ -20,7 +20,16 @@
   },
   "source_files": "SwiftyHTML/Classes/**/*.{swift}",
   "pod_target_xcconfig": {
-    "SWIFT_VERSION": "3.0"
+    "SWIFT_VERSION": "3.0",
+    "HEADER_SEARCH_PATHS": "$(SDKROOT)/usr/include/libxml2",
+    "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES",
+    "OTHER_LDFLAGS": "\"$(inherited)\" \"-lxml2\" \"-objc\""
   },
-  "frameworks": "Foundation"
+  "libraries": "xml2",
+  "frameworks": "Foundation",
+  "dependencies": {
+    "Kanna": [
+      "~> 2.1.0"
+    ]
+  }
 }

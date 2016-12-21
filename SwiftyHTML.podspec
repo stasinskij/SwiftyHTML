@@ -32,13 +32,20 @@ Pod::Spec.new do |s|
 
   s.source_files = 'SwiftyHTML/Classes/**/*.{swift}'
 
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
-  
+  s.pod_target_xcconfig = { 
+    'SWIFT_VERSION' => '3.0',
+    'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2',
+    'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+    'OTHER_LDFLAGS' => '"$(inherited)" "-lxml2" "-objc"'
+  }
+
+  s.library = 'xml2'
+  s.frameworks = 'Foundation'
+  s.dependency 'Kanna', '~> 2.1.0'
+
   # s.resource_bundles = {
   #   'SwiftyHTML' => ['SwiftyHTML/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'Foundation'
-  # s.dependency 'SwiftSoup'
 end

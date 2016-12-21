@@ -1,5 +1,7 @@
 PODS:
-  - SwiftyHTML (0.1.4)
+  - Kanna (2.1.1)
+  - SwiftyHTML (0.1.4):
+    - Kanna (~> 2.1.0)
 
 DEPENDENCIES:
   - SwiftyHTML (from `../`)
@@ -9,7 +11,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SwiftyHTML: e9b90e76f6f42843c344ef6e2e9a64eede305b34
+  Kanna: 9b4b086c218703f2b94f5b21a466217dd2f9332e
+  SwiftyHTML: a215add453d2ba1339d48f1214c3fe8b3d1e77c0
 
 PODFILE CHECKSUM: edaf8a68b4b14080cb20983459951974895f146e
 

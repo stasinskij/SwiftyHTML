@@ -52,6 +52,7 @@
 		B92479FCB7E32076A635DA79 /* Pods-SwiftyHTML_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyHTML_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyHTML_Tests/Pods-SwiftyHTML_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB21781A1DF85B9B00749033 /* GRHTMLtemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = GRHTMLtemplate.html; sourceTree = "<group>"; };
 		BB2CE2B31DB78940008C7E74 /* BasicHTMLDocument.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BasicHTMLDocument.html; sourceTree = "<group>"; };
+		BB95CCFF1E0AC1EB002764EA /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		BBA84F2B1DF1727F0063A771 /* TestAttributedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAttributedStrings.swift; sourceTree = "<group>"; };
 		BBDCB1461DF819AF006B966E /* AndroidHTML.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = AndroidHTML.html; sourceTree = "<group>"; };
 		C2E6AF3F0C93D1D03C07A518 /* SwiftyHTML.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftyHTML.podspec; path = ../SwiftyHTML.podspec; sourceTree = "<group>"; };
@@ -167,6 +168,7 @@
 		8B8150D8D471D3C9AAE6D6D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BB95CCFF1E0AC1EB002764EA /* libxml2.tbd */,
 				14493667D4BA04F7705884BD /* Pods_SwiftyHTML_Example.framework */,
 				8F0CCD6B939B1C42BA0520BB /* Pods_SwiftyHTML_Tests.framework */,
 			);
@@ -519,7 +521,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = SwiftyHTML/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -535,7 +537,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = SwiftyHTML/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -557,6 +559,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
@@ -574,6 +577,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";

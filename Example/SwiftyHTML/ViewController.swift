@@ -8,7 +8,6 @@
 
 import UIKit
 import SwiftyHTML
-import Foundation
 
 class ViewController: UIViewController {
 
@@ -26,10 +25,17 @@ class ViewController: UIViewController {
 //        print("html string: \(htmlString)")
         
         // Test
-        let htmlFile = Bundle.main.url(forResource: "AndroidHTML", withExtension: "html")!
-//        let htmlFile = Bundle.main.url(forResource: "GRHTMLtemplate", withExtension: "html")!
+//        let htmlFile = Bundle.main.url(forResource: "AndroidHTML", withExtension: "html")!
+        let htmlFile = Bundle.main.url(forResource: "GRHTMLtemplate", withExtension: "html")!
         let contents = try! String(contentsOf: htmlFile, encoding: .utf8)
 //        print("contents: \(contents)")
+        
+        // Testing HTMLParser with Kanna
+        let parser = HTMLParser()
+        if parser.parsed(html: contents) {
+            print("parsed html...")
+        }
+        
         
         let htmlData = contents.data(using: .utf8)!
         if let str = try? NSAttributedString.init(data: htmlData, options: [NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType], documentAttributes: nil) {
