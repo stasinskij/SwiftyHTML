@@ -39,16 +39,16 @@ class ViewController: UIViewController {
         }
         
         
-//        let htmlData = contents.data(using: .utf8)!
-//        if let str = try? NSAttributedString.init(data: htmlData, options: [NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType], documentAttributes: nil) {
-//            print(str)
-//            self.textView.attributedText = str
-//            // Original HTML
-//            self.webView.loadHTMLString(contents, baseURL: nil)
-//            // Generated HTML from NSMutableAttributedString
-//            let mutableStr = NSMutableAttributedString.init(attributedString: str).toHTML()
-//            self.webView.loadHTMLString(mutableStr, baseURL: nil)
-//        }
+        let htmlData = contents.data(using: .utf8)!
+        if let str = try? NSAttributedString.init(data: htmlData, options: [NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType], documentAttributes: nil) {
+            print(str)
+            self.textView.attributedText = str
+            // Original HTML
+            self.webView.loadHTMLString(contents, baseURL: nil)
+            // Generated HTML from NSMutableAttributedString
+            let mutableStr = NSMutableAttributedString.init(attributedString: str).toHTML()
+            self.webView.loadHTMLString(mutableStr, baseURL: nil)
+        }
     }
 }
 
