@@ -4,25 +4,16 @@ PODS:
     - Kanna (~> 2.1.0)
 
 DEPENDENCIES:
-  - Kanna (from `https://github.com/drumbart/Kanna.git`, branch `develop`)
   - SwiftyHTML (from `../`)
 
 EXTERNAL SOURCES:
-  Kanna:
-    :branch: develop
-    :git: https://github.com/drumbart/Kanna.git
   SwiftyHTML:
     :path: ../
 
-CHECKOUT OPTIONS:
-  Kanna:
-    :commit: 21f179ee4b684079d919d13f1a98f08ee5681eb8
-    :git: https://github.com/drumbart/Kanna.git
-
 SPEC CHECKSUMS:
-  Kanna: e0f59b83a09987acc5542332ced7f61b4d655879
+  Kanna: 9b4b086c218703f2b94f5b21a466217dd2f9332e
   SwiftyHTML: a215add453d2ba1339d48f1214c3fe8b3d1e77c0
 
-PODFILE CHECKSUM: 3a97b083eb05b39e3d575a54cafa63b62193195d
+PODFILE CHECKSUM: 4643ffb249c8ae1f472ffe0c2734ae81803c9313
 
 COCOAPODS: 1.2.0.beta.1

@@ -34,7 +34,6 @@ import libxml2
 libxmlHTMLNode
 */
 internal final class libxmlHTMLNode: XMLElement {
-
     var text: String? {
         if nodePtr != nil {
             return libxmlGetNodeContent(nodePtr!)
@@ -56,11 +55,6 @@ internal final class libxmlHTMLNode: XMLElement {
         let html = String(cString: UnsafePointer((buf?.pointee.content)!))
         xmlBufferFree(buf)
         return html
-    }
-    
-    public var toAttributedString: NSAttributedString? {
-        print("TO ATTRIBUTED == tag: \(self.tagName) - content: \(self.content)")
-        return nil
     }
     
     var innerHTML: String? {

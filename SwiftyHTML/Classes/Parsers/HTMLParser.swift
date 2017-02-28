@@ -25,9 +25,13 @@ public class HTMLParser {
     public func parsed(htmlData: Data) -> String? {
         if let doc = HTML(html: htmlData, encoding: .utf8) {
             print("HTML: \(doc.body?.toHTML)")
-            _ = doc.body?.toAttributedString
-            let xpathObject = doc.body?.xpath("div")
-            let xpathHtml = xpathObject?.first?.toHTML
+//            _ = doc.body?.toAttributedString
+//            let xpathObject = doc.body?.xpath("div")
+//            let xpathHtml = xpathObject?.first?.toHTML
+            
+            let iterator = doc.xpath("body").makeIterator()
+            iterator.forEach{ print($0) }
+            
             return doc.body?.toHTML
         }
         

@@ -5,7 +5,7 @@ def kanna_override
 end
 
 target 'SwiftyHTML_Example' do
-    kanna_override
+    # kanna_override
   pod 'SwiftyHTML', :path => '../'
 
   target 'SwiftyHTML_Tests' do
