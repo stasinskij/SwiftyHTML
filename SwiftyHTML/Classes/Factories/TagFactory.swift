@@ -16,7 +16,9 @@ public struct TagFactory {
         }
         else if attributes.keys.contains(NSForegroundColorAttributeName) ||
             attributes.keys.contains(NSFontAttributeName) ||
-            attributes.keys.contains(NSBackgroundColorAttributeName) {
+            attributes.keys.contains(NSBackgroundColorAttributeName) ||
+            attributes.keys.contains(NSUnderlineStyleAttributeName) ||
+            attributes.keys.contains(NSStrikethroughStyleAttributeName) {
             return SpanFactory()
         }
         else {

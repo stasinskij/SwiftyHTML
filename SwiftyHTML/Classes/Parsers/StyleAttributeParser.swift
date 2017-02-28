@@ -27,6 +27,16 @@ public struct StyleAttributeParser {
             styleAttribute.backgroundColor = color
         }
         
+        if let underlineValue = attributes[NSUnderlineStyleAttributeName] as? Int,
+            underlineValue > 0 {
+            styleAttribute.underline = true
+        }
+        
+        if let strikethroughValue = attributes[NSStrikethroughStyleAttributeName] as? Int,
+            strikethroughValue > 0 {
+            styleAttribute.strikethrough = true
+        }
+        
         return styleAttribute.value != "" ? [styleAttribute] : []
     }
 }

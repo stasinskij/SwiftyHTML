@@ -36,7 +36,7 @@ class ViewController: UIViewController {
             print(str)
             self.textView.attributedText = str
             // Original HTML
-            self.webView.loadHTMLString(contents, baseURL: nil)
+//            self.webView.loadHTMLString(contents, baseURL: nil)
             // Generated HTML from NSMutableAttributedString
             let mutableStr = NSMutableAttributedString.init(attributedString: str).toHTML()
             self.webView.loadHTMLString(mutableStr, baseURL: nil)
