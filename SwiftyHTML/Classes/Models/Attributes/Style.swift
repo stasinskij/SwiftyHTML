@@ -8,6 +8,8 @@
 
 open class Style: TagAttribute {
     private let TextDecorationKey = "text-decoration:"
+    private let FontWeightKey = "font-weight:"
+    private let FontStyleKey = "font-style:"
     
     public var name: String = "style"
     open var value: String
@@ -81,15 +83,10 @@ open class Style: TagAttribute {
         var str = ""
         
         str += "font-family:\(font.fontName); font-size:\(Int(font.pointSize))px;"
+        str += FontWeightKey + (font.isBold ? "bold;" : "normal;")
         
-        if font.isBold {
-            str += "font-weight:bold;"
-        }
-        else if font.isItalic {
-            str += "font-weight:italic;"
-        }
-        else {
-            str += "font-weight:normal;"
+        if font.isItalic {
+            str += FontStyleKey + "italic;"
         }
         
         return str
