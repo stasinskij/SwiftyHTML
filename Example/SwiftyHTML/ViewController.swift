@@ -34,11 +34,13 @@ class ViewController: UIViewController {
         let htmlData = contents.data(using: .utf8)!
         if let str = try? NSAttributedString.init(data: htmlData, options: [NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType], documentAttributes: nil) {
             print(str)
+            print("ATTRIBUTES: \(str.attributes(at: 0, longestEffectiveRange: nil, in: NSMakeRange(0, str.length)))")
             self.textView.attributedText = str
             // Original HTML
 //            self.webView.loadHTMLString(contents, baseURL: nil)
             // Generated HTML from NSMutableAttributedString
             let mutableStr = NSMutableAttributedString.init(attributedString: str).toHTML()
+            print("HTML: \(mutableStr)")
             self.webView.loadHTMLString(mutableStr, baseURL: nil)
         }
     }

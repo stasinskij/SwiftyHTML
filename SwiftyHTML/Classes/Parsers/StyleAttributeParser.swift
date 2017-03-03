@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct StyleAttributeParser {
+public struct StyleAttributeParser: AttributeValueParser {
     
     public func parsed(attributes: [String : Any]) -> [TagAttribute] {
         let styleAttribute = Style()
@@ -35,6 +35,10 @@ public struct StyleAttributeParser {
         if let strikethroughValue = attributes[NSStrikethroughStyleAttributeName] as? Int,
             strikethroughValue > 0 {
             styleAttribute.strikethrough = true
+        }
+        
+        if let paragraphStyle = attributes[NSParagraphStyleAttributeName] as? NSParagraphStyle {
+            styleAttribute.textAlignment = paragraphStyle.alignment
         }
         
         return styleAttribute.value != "" ? [styleAttribute] : []

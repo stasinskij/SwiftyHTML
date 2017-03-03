@@ -38,7 +38,11 @@ open class Style: TagAttribute {
             self.value = self.computedValue()
         }
     }
-    public var textAlignment: NSTextAlignment?
+    public var textAlignment: NSTextAlignment? {
+        didSet {
+            self.value = self.computedValue()
+        }
+    }
     
     public required init?(value: String) {
         self.value = value
@@ -73,6 +77,21 @@ open class Style: TagAttribute {
             }
             else {
                 str += "text-decoration:line-through;"
+            }
+        }
+        
+        if let alignment = self.textAlignment {
+            switch alignment {
+            case .left:
+                str += "text-align:left; display:block;"
+            case .center:
+                str += "text-align:center; display:block;"
+            case .right:
+                str += "text-align:right; display:block;"
+            case .justified:
+                str += "text-align:justify; display:block;"
+            default:
+                str += ""
             }
         }
         
