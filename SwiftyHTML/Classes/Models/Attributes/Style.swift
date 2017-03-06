@@ -44,29 +44,29 @@ open class Style: TagAttribute {
         }
     }
     
-    public required init?(value: String) {
-        self.value = value
-    }
-    
-    public init() {
-        self.value = ""
-    }
-    
-    private func computedValue() -> String {
-        var str = ""
-        
+    private var fontColorString: String {
         if let color = self.color, let rgb = color.rgb() {
-            str += "color:rgb(\(rgb.red),\(rgb.green),\(rgb.blue));"
+            return "color:rgb(\(rgb.red),\(rgb.green),\(rgb.blue));"
         }
-        
+        return ""
+    }
+    
+    private var bgColorString: String {
         if let bgColor = self.backgroundColor, let rgb = bgColor.rgb() {
-            str += "background-color:rgb(\(rgb.red),\(rgb.green),\(rgb.blue));"
+            return "background-color:rgb(\(rgb.red),\(rgb.green),\(rgb.blue));"
         }
-        
+        return ""
+    }
+    
+    private var fontString: String {
         if let font = self.font {
-            str += self.getFontAttributes(font: font)
+            return self.getFontAttributes(font: font)
         }
-        
+        return ""
+    }
+    
+    private var underlineStrikethroughString: String {
+        var str = ""
         if let underline = self.underline, underline == true {
             str += "text-decoration:underline;"
         }
@@ -79,22 +79,44 @@ open class Style: TagAttribute {
                 str += "text-decoration:line-through;"
             }
         }
-        
+        return str
+    }
+    
+    private var alignmentString: String {
         if let alignment = self.textAlignment {
             switch alignment {
             case .left:
-                str += "text-align:left; display:block;"
+                return "text-align:left; display:block;"
             case .center:
-                str += "text-align:center; display:block;"
+                return "text-align:center; display:block;"
             case .right:
-                str += "text-align:right; display:block;"
+                return "text-align:right; display:block;"
             case .justified:
-                str += "text-align:justify; display:block;"
+                return "text-align:justify; display:block;"
             default:
-                str += ""
+                return ""
             }
         }
+        return ""
+    }
+    
+    public required init?(value: String) {
+        self.value = value
+    }
+    
+    public init() {
+        self.value = ""
+    }
+    
+    private func computedValue() -> String {
+        var str = ""
         
+        str += self.fontColorString
+        str += self.bgColorString
+        str += self.fontString
+        str += self.underlineStrikethroughString
+        str += self.alignmentString
+
         return str
     }
     
