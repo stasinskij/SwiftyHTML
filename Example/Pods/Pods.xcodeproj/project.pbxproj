@@ -27,6 +27,8 @@
 		A55491CA8635C19418CA530CF8F0A82B /* Pods-SwiftyHTML_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF835B8281607224C9C44B14884BDE81 /* Pods-SwiftyHTML_Tests-dummy.m */; };
 		B9FE202CE414A0A12314EDB2C238BD21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		BA68EC55430CE978F03C97B1BAC932D6 /* Span.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C4ABA5216C5361B24B381834CBB6 /* Span.swift */; };
+		BB99AA4F1E6993BE00774068 /* DivFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB99AA4E1E6993BE00774068 /* DivFactory.swift */; };
+		BB99AA511E69947300774068 /* DivAttributeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB99AA501E69947300774068 /* DivAttributeParser.swift */; };
 		BCEC8389CCB014BB3ED2B9BA60E92098 /* UIColor+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5352806D38027D00B6DED5D72BC6BA /* UIColor+Convenience.swift */; };
 		CA6D7AC0955039D92A048E4AFD351BD3 /* Alt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B34A1C0C37C260C93DD8B69ADD3C088 /* Alt.swift */; };
 		CA8308B36BED464800580B992635545D /* HrefAttributeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49C82BA66B36BB0A2C893B324348628 /* HrefAttributeParser.swift */; };
@@ -70,17 +72,17 @@
 		3C94DF63B779C7046C4FA3C919165AFD /* StringRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringRepresentable.swift; sourceTree = "<group>"; };
 		42BEFF865F680AC9C9D33032608AF64F /* Href.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Href.swift; sourceTree = "<group>"; };
 		4A5A8369B56B3F4727F67EB393D6CAC8 /* Pods-SwiftyHTML_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftyHTML_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		4A633E7A3B56F5D4971CA5AD7E93CE45 /* Pods-SwiftyHTML_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftyHTML_Example.modulemap"; sourceTree = "<group>"; };
+		4A633E7A3B56F5D4971CA5AD7E93CE45 /* Pods-SwiftyHTML_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftyHTML_Example.modulemap"; sourceTree = "<group>"; };
 		520B46720A925CC5C2843E6BE0015CD9 /* Pods-SwiftyHTML_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyHTML_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A6D5A29D989EBF33A0E47624786FD3F /* Pods-SwiftyHTML_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyHTML_Tests-resources.sh"; sourceTree = "<group>"; };
 		72058448F609FB2392D69E3475C12B5A /* Pods-SwiftyHTML_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyHTML_Example-frameworks.sh"; sourceTree = "<group>"; };
-		72E47D72FC4FBC6D01DC36FF6ED527F9 /* SwiftyHTML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyHTML.modulemap; sourceTree = "<group>"; };
+		72E47D72FC4FBC6D01DC36FF6ED527F9 /* SwiftyHTML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyHTML.modulemap; sourceTree = "<group>"; };
 		77CE64E44D587BF6AB7E5D62615D5E8E /* Pods-SwiftyHTML_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyHTML_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7C5BFE0A18F3530B1969BF5E9591863B /* AnchorFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnchorFactory.swift; sourceTree = "<group>"; };
 		7CD220BFA9D826453A1719C556623F55 /* SwiftyHTML-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyHTML-umbrella.h"; sourceTree = "<group>"; };
 		8525BAE5AAFABF1B2BFD7C9C4A432E2B /* SwiftyHTML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyHTML.xcconfig; sourceTree = "<group>"; };
-		8D5152E093536E878B642295D7FA4BF8 /* Pods_SwiftyHTML_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftyHTML_Tests.framework; path = "Pods-SwiftyHTML_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8D5152E093536E878B642295D7FA4BF8 /* Pods_SwiftyHTML_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyHTML_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94735DE20206FC4661F830634FDCFB46 /* Anchor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Anchor.swift; sourceTree = "<group>"; };
 		9C295CDA5D6F02B65AF5D0B76441E177 /* Pods-SwiftyHTML_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftyHTML_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		A284C2153259DB1C348D58C5E5AC8288 /* Div.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Div.swift; sourceTree = "<group>"; };
@@ -91,8 +93,10 @@
 		B0A6ECB8EE5DC62C02EE077A14CAE9BD /* TagGenerating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TagGenerating.swift; sourceTree = "<group>"; };
 		B293859D1A1CBBA0A28D95D6C41F683F /* Bold.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Bold.swift; sourceTree = "<group>"; };
 		B49C82BA66B36BB0A2C893B324348628 /* HrefAttributeParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HrefAttributeParser.swift; sourceTree = "<group>"; };
-		B68A436CBC4FF44C0D62BE5199DA69C4 /* Pods_SwiftyHTML_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftyHTML_Example.framework; path = "Pods-SwiftyHTML_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA3999CA4B152BEFD30871C90505A2B9 /* SwiftyHTML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyHTML.framework; path = SwiftyHTML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B68A436CBC4FF44C0D62BE5199DA69C4 /* Pods_SwiftyHTML_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyHTML_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA3999CA4B152BEFD30871C90505A2B9 /* SwiftyHTML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyHTML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB99AA4E1E6993BE00774068 /* DivFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivFactory.swift; sourceTree = "<group>"; };
+		BB99AA501E69947300774068 /* DivAttributeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivAttributeParser.swift; sourceTree = "<group>"; };
 		BF835B8281607224C9C44B14884BDE81 /* Pods-SwiftyHTML_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftyHTML_Tests-dummy.m"; sourceTree = "<group>"; };
 		C1463E4CF824856DBE31B1FA2C9FE252 /* SwiftyHTML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyHTML-prefix.pch"; sourceTree = "<group>"; };
 		C1684FEF8C221F24CED0DD93ED26EB72 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,7 +108,7 @@
 		D720BF4B0C10267A2D7F846EEA79292C /* Tag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		D9F652B6C2444D56886D5FBE52AE39ED /* Pods-SwiftyHTML_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftyHTML_Example-umbrella.h"; sourceTree = "<group>"; };
 		E11C09C20B174285E4D6AA7A2BFD7712 /* Pods-SwiftyHTML_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyHTML_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E953C9EF971279D694DF8C738DDC9388 /* Pods-SwiftyHTML_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftyHTML_Tests.modulemap"; sourceTree = "<group>"; };
+		E953C9EF971279D694DF8C738DDC9388 /* Pods-SwiftyHTML_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftyHTML_Tests.modulemap"; sourceTree = "<group>"; };
 		ECD2D3DD2F0707FB7C675FC0AA097914 /* SwiftyHTML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyHTML-dummy.m"; sourceTree = "<group>"; };
 		F150F306FF20602C7D7F458BA96453F7 /* Pods-SwiftyHTML_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyHTML_Example-resources.sh"; sourceTree = "<group>"; };
 		FB362937E8C21AB2D5B51B23DB5E08DD /* TagFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TagFactory.swift; sourceTree = "<group>"; };
@@ -146,7 +150,6 @@
 				CA5352806D38027D00B6DED5D72BC6BA /* UIColor+Convenience.swift */,
 				2FEA4A2668E17D20C881A127089CE120 /* UIFont+Convenience.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -157,7 +160,6 @@
 				D720BF4B0C10267A2D7F846EEA79292C /* Tag.swift */,
 				33D348A425F7B4899644AE8596771BA2 /* TagAttribute.swift */,
 			);
-			name = Protocols;
 			path = Protocols;
 			sourceTree = "<group>";
 		};
@@ -170,7 +172,6 @@
 				18CA59DB1350E51E5D71427E14C9D963 /* Protocols */,
 				A4783ACD3FCC23E885D4E59B23FD52B1 /* Tags */,
 			);
-			name = Models;
 			path = Models;
 			sourceTree = "<group>";
 		};
@@ -198,7 +199,6 @@
 			children = (
 				BCEDB958C5BC4EE011B6F76764FBE3E6 /* Classes */,
 			);
-			name = SwiftyHTML;
 			path = SwiftyHTML;
 			sourceTree = "<group>";
 		};
@@ -225,7 +225,6 @@
 			children = (
 				288D446FAA3BF94EEDB7BAA15B2CF8C7 /* SwiftyHTMLConfiguration.swift */,
 			);
-			name = Configuration;
 			path = Configuration;
 			sourceTree = "<group>";
 		};
@@ -240,13 +239,13 @@
 		75C2186FCC28C5685F8D4C14738FDA2C /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				BB99AA4E1E6993BE00774068 /* DivFactory.swift */,
 				7C5BFE0A18F3530B1969BF5E9591863B /* AnchorFactory.swift */,
 				23ADA11F1B75C28A78DD2E15FF4339B1 /* ParagraphFactory.swift */,
 				348914ED46508F59F68B355C55DFF639 /* SpanFactory.swift */,
 				FB362937E8C21AB2D5B51B23DB5E08DD /* TagFactory.swift */,
 				B0A6ECB8EE5DC62C02EE077A14CAE9BD /* TagGenerating.swift */,
 			);
-			name = Factories;
 			path = Factories;
 			sourceTree = "<group>";
 		};
@@ -296,7 +295,6 @@
 				A284C2153259DB1C348D58C5E5AC8288 /* Div.swift */,
 				CFD0C4ABA5216C5361B24B381834CBB6 /* Span.swift */,
 			);
-			name = Tags;
 			path = Tags;
 			sourceTree = "<group>";
 		};
@@ -317,7 +315,6 @@
 				2795B661C908ADFBC6755D12585E3FFB /* Models */,
 				C10D12E99BCD2D35DD6E816E690F7FA0 /* Parsers */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -328,8 +325,8 @@
 				08B8F937873007476B3DFF247D839C9D /* AttributeValueParser.swift */,
 				B49C82BA66B36BB0A2C893B324348628 /* HrefAttributeParser.swift */,
 				A834A234CB21C204EE72F44CDD30D49E /* StyleAttributeParser.swift */,
+				BB99AA501E69947300774068 /* DivAttributeParser.swift */,
 			);
-			name = Parsers;
 			path = Parsers;
 			sourceTree = "<group>";
 		};
@@ -353,7 +350,6 @@
 				1B34A1C0C37C260C93DD8B69ADD3C088 /* Alt.swift */,
 				ABC9B4E89C5C0C169D6470A78C93E48C /* Style.swift */,
 			);
-			name = Attributes;
 			path = Attributes;
 			sourceTree = "<group>";
 		};
@@ -506,6 +502,7 @@
 				8A0083B992B80AAA939B4F43D27CDB27 /* Href.swift in Sources */,
 				CA8308B36BED464800580B992635545D /* HrefAttributeParser.swift in Sources */,
 				3CC359483956F2B8A02BCEDFB50FBB5B /* NSMutableAttributedString+HTMLConvert.swift in Sources */,
+				BB99AA4F1E6993BE00774068 /* DivFactory.swift in Sources */,
 				197337386C75DAAD58C91EE7097F6D42 /* ParagraphFactory.swift in Sources */,
 				BA68EC55430CE978F03C97B1BAC932D6 /* Span.swift in Sources */,
 				DBB72C77CA7345184B7371311DA652FE /* SpanFactory.swift in Sources */,
@@ -519,6 +516,7 @@
 				08D68C2726F24A6A2CAD03D797C417BB /* TagAttribute.swift in Sources */,
 				6288045A63F3D1CFB43D5DB78893F32C /* TagFactory.swift in Sources */,
 				D9CA93029695C07F9682A870E65A207A /* TagGenerating.swift in Sources */,
+				BB99AA511E69947300774068 /* DivAttributeParser.swift in Sources */,
 				BCEC8389CCB014BB3ED2B9BA60E92098 /* UIColor+Convenience.swift in Sources */,
 				159C0F5B3EFADB43B78D8237CE976428 /* UIFont+Convenience.swift in Sources */,
 			);
