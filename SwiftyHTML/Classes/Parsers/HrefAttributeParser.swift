@@ -18,12 +18,11 @@ public struct HrefAttributeParser: AttributeValueParser {
             let url = urlValue as? NSURL,
             let absoluteStr = url.absoluteString,
             let href = SwiftyHTMLConfiguration.hrefClass.init(value:absoluteStr) {
-            styleAttributes += [href as! TagAttribute]
+            styleAttributes += [href as TagAttribute]
         }
         
-        if let altValue = attributes[Alt.AltAttributeName] as? String {
-            let alt = Alt.init(value: altValue)
-            styleAttributes += [alt as! TagAttribute]
+        if let altValue = attributes[Alt.AltAttributeName] as? String, let alt = Alt.init(value: altValue) {
+            styleAttributes += [alt]
         }
         
         return styleAttributes
