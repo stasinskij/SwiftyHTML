@@ -16,16 +16,16 @@ class TestAttributedStrings {
     }()
     
     static let stringWithBlueColorAttribute: NSMutableAttributedString = {
-        return NSMutableAttributedString(string: "blue string", attributes: convertToOptionalNSAttributedStringKeyDictionary([convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor) : UIColor.blue]))
+        return NSMutableAttributedString(string: "blue string", attributes: [NSAttributedString.Key.foregroundColor : UIColor.blue])
     }()
     
     static let stringWithLinkAttribute: NSMutableAttributedString = {
-        return NSMutableAttributedString(string: "A Google link", attributes: convertToOptionalNSAttributedStringKeyDictionary([convertFromNSAttributedStringKey(NSAttributedString.Key.link) : NSURL.init(string: "https://www.google.com")!]))
+        return NSMutableAttributedString(string: "A Google link", attributes: [NSAttributedString.Key.link : NSURL.init(string: "https://www.google.com")!])
     }()
     
     static let stringWithLinkAndAltAttribute: NSMutableAttributedString = {
         let linkString = TestAttributedStrings.stringWithLinkAttribute
-        linkString.addAttribute(convertToNSAttributedStringKey(Alt.AltAttributeName), value: "TestAltValue", range: NSMakeRange(0, linkString.length))
+        linkString.addAttribute(NSAttributedString.Key(rawValue: Alt.AltAttributeName), value: "TestAltValue", range: NSMakeRange(0, linkString.length))
         return linkString
     }()
     
@@ -52,20 +52,4 @@ class TestAttributedStrings {
         str.append(cleanString)
         return str
     }()
-}
-
-// Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
-	guard let input = input else { return nil }
-	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
-}
-
-// Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
-	return input.rawValue
-}
-
-// Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertToNSAttributedStringKey(_ input: String) -> NSAttributedString.Key {
-	return NSAttributedString.Key(rawValue: input)
 }
