@@ -9,8 +9,7 @@
 import Foundation
 
 public struct DivFactory: TagGenerating {
-    public func generateTag(content: String, range: NSRange, attributes: [String : Any]) -> Tag? {
-        print("should generate Div tag\n")
+    public func generateTag(content: String, range: NSRange, attributes: [NSAttributedString.Key : Any]) -> Tag? {
         let tagAttributes = HrefAttributeParser().parsed(attributes: attributes)
         return SwiftyHTMLConfiguration.anchorClass.init(value: content, range: range, attributes: tagAttributes)
     }

@@ -73,7 +73,7 @@ open class Style: TagAttribute {
         
         if let strikethrough = self.strikethrough, strikethrough == true {
             if str.contains(TextDecorationKey) {
-                str.insert(contentsOf: " line-through".characters, at: str.index(str.endIndex, offsetBy: -1))
+                str.insert(contentsOf: " line-through", at: str.index(str.endIndex, offsetBy: -1))
             }
             else {
                 str += "text-decoration:line-through;"

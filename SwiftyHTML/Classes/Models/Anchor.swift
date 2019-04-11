@@ -13,8 +13,8 @@ open class Anchor: Tag {
     open var attributes: [TagAttribute]
     
     public var attributedString: NSMutableAttributedString? {
-        return NSMutableAttributedString(string: self.value, attributes: [NSUnderlineStyleAttributeName : NSUnderlineStyle.styleSingle.rawValue,
-                                                                          NSForegroundColorAttributeName : UIColor.blue])
+        return NSMutableAttributedString(string: self.value, attributes: convertToOptionalNSAttributedStringKeyDictionary([convertFromNSAttributedStringKey(NSAttributedString.Key.underlineStyle) : NSUnderlineStyle.single.rawValue,
+                                                                          convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor) : UIColor.blue]))
     }
     
     public required init(value: String, range: NSRange, attributes: [TagAttribute]) {
@@ -22,4 +22,15 @@ open class Anchor: Tag {
         self.range = range
         self.attributes = attributes
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+	return input.rawValue
 }

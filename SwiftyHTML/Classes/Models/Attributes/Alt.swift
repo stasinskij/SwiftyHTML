@@ -14,7 +14,7 @@ open class Alt: TagAttribute {
     open var value: String
     
     public var attributedString: NSMutableAttributedString? {
-        return NSMutableAttributedString(string: self.value, attributes: [Alt.AltAttributeName : self.value])
+        return NSMutableAttributedString(string: self.value, attributes: [NSAttributedString.Key(rawValue: Alt.AltAttributeName) : self.value])
     }
     
     public required init?(value: String) {

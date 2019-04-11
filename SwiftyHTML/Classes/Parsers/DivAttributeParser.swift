@@ -10,7 +10,7 @@ import Foundation
 
 public struct DivAttributeParser: AttributeValueParser {
     
-    public func parsed(attributes: [String : Any]) -> [TagAttribute] {
+    public func parsed(attributes: [NSAttributedString.Key : Any]) -> [TagAttribute] {
         return []
     }
 }

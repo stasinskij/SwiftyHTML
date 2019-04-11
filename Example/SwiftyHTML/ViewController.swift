@@ -32,9 +32,9 @@ class ViewController: UIViewController {
 //        print("contents: \(contents)")
         
         let htmlData = contents.data(using: .utf8)!
-        if let str = try? NSAttributedString.init(data: htmlData, options: [NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType], documentAttributes: nil) {
+        if let str = try? NSAttributedString.init(data: htmlData, options: convertToNSAttributedStringDocumentReadingOptionKeyDictionary([convertFromNSAttributedStringDocumentAttributeKey(NSAttributedString.DocumentAttributeKey.documentType) : convertFromNSAttributedStringDocumentType(NSAttributedString.DocumentType.html)]), documentAttributes: nil) {
             print(str)
-            print("ATTRIBUTES: \(str.attributes(at: 0, longestEffectiveRange: nil, in: NSMakeRange(0, str.length)))")
+            print("ATTRIBUTES: \(convertFromNSAttributedStringKeyDictionary(str.attributes(at: 0, longestEffectiveRange: nil, in: NSMakeRange(0, str.length))))")
             self.textView.attributedText = str
             // Original HTML
 //            self.webView.loadHTMLString(contents, baseURL: nil)
@@ -46,3 +46,23 @@ class ViewController: UIViewController {
     }
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToNSAttributedStringDocumentReadingOptionKeyDictionary(_ input: [String: Any]) -> [NSAttributedString.DocumentReadingOptionKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.DocumentReadingOptionKey(rawValue: key), value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringDocumentAttributeKey(_ input: NSAttributedString.DocumentAttributeKey) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringDocumentType(_ input: NSAttributedString.DocumentType) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKeyDictionary(_ input: [NSAttributedString.Key: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
