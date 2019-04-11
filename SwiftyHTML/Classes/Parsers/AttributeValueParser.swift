@@ -7,5 +7,5 @@
 //
 
 public protocol AttributeValueParser {
-    func parsed(attributes: [String : Any]) -> [TagAttribute]
+    func parsed(attributes: [NSAttributedString.Key : Any]) -> [TagAttribute]
 }

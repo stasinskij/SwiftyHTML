@@ -10,5 +10,5 @@ import Foundation
 
 public protocol TagGenerating {
     // Generate tag with NSAttributedString attributes
-    func generateTag(content: String, range: NSRange, attributes: [String : Any]) -> Tag?
+    func generateTag(content: String, range: NSRange, attributes: [NSAttributedString.Key : Any]) -> Tag?
 }

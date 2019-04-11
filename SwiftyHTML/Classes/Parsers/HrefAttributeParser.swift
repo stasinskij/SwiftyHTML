@@ -10,18 +10,18 @@ import UIKit
 
 public struct HrefAttributeParser: AttributeValueParser {
     
-    public func parsed(attributes: [String : Any]) -> [TagAttribute] {
+    public func parsed(attributes: [NSAttributedString.Key : Any]) -> [TagAttribute] {
         // Generate style attribute if available
         var styleAttributes = StyleAttributeParser().parsed(attributes: attributes)
         
-        if let urlValue = attributes[NSLinkAttributeName],
+        if let urlValue = attributes[NSAttributedString.Key.link],
             let url = urlValue as? NSURL,
             let absoluteStr = url.absoluteString,
             let href = SwiftyHTMLConfiguration.hrefClass.init(value:absoluteStr) {
             styleAttributes += [href as TagAttribute]
         }
         
-        if let altValue = attributes[Alt.AltAttributeName] as? String, let alt = Alt.init(value: altValue) {
+        if let altValue = attributes[NSAttributedString.Key(rawValue: Alt.AltAttributeName)] as? String, let alt = Alt.init(value: altValue) {
             styleAttributes += [alt]
         }
         

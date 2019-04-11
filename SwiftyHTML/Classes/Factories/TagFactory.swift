@@ -10,15 +10,15 @@ import UIKit
 
 public struct TagFactory {
     
-    public static func factory(attributes: [String : Any]) -> TagGenerating {
-        if attributes.keys.contains(NSLinkAttributeName) {
+    public static func factory(attributes: [NSAttributedString.Key : Any]) -> TagGenerating {
+        if attributes.keys.contains(NSAttributedString.Key.link) {
             return AnchorFactory()
         }
-        else if attributes.keys.contains(NSForegroundColorAttributeName) ||
-            attributes.keys.contains(NSFontAttributeName) ||
-            attributes.keys.contains(NSBackgroundColorAttributeName) ||
-            attributes.keys.contains(NSUnderlineStyleAttributeName) ||
-            attributes.keys.contains(NSStrikethroughStyleAttributeName) {
+        else if attributes.keys.contains(NSAttributedString.Key.foregroundColor) ||
+            attributes.keys.contains(NSAttributedString.Key.font) ||
+            attributes.keys.contains(NSAttributedString.Key.backgroundColor) ||
+            attributes.keys.contains(NSAttributedString.Key.underlineStyle) ||
+            attributes.keys.contains(NSAttributedString.Key.strikethroughStyle) {
             return SpanFactory()
         }
         else {

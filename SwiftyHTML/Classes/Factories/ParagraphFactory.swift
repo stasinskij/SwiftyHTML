@@ -10,8 +10,7 @@ import Foundation
 
 public struct ParagraphFactory: TagGenerating {
     
-    public func generateTag(content: String, range: NSRange, attributes: [String : Any]) -> Tag? {
-        print("should generate Paragraph tag\n")
+    public func generateTag(content: String, range: NSRange, attributes: [NSAttributedString.Key : Any]) -> Tag? {
         return nil
     }
 }
