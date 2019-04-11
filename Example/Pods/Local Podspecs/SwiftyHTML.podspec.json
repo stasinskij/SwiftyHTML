@@ -1,22 +1,26 @@
 {
   "name": "SwiftyHTML",
-  "version": "0.1.0",
-  "summary": "A short description of SwiftyHTML.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/SwiftyHTML",
+  "version": "0.1.8",
+  "summary": "A delightful framework for converting HTML to native Swift classes.",
+  "description": "A delightful framework for converting HTML to native Swift classes as well as generating HTML from native Swift classes and attributes.",
+  "homepage": "https://github.com/drumbart/SwiftyHTML",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Bartosz Tułodziecki": "bartosz.tulodziecki@implix.com"
+    "Bartek Tułodziecki": "bartek.tulodziecki@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/SwiftyHTML.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/drumbart/SwiftyHTML.git",
+    "tag": "0.1.8"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "SwiftyHTML/Classes/**/*"
+  "source_files": "SwiftyHTML/Classes/**/*.{swift}",
+  "pod_target_xcconfig": {
+    "SWIFT_VERSION": "3.0"
+  },
+  "frameworks": "Foundation"
 }
