@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'SwiftyHTML/Classes/**/*.{swift}'
 
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
   
   # s.resource_bundles = {
   #   'SwiftyHTML' => ['SwiftyHTML/Assets/*.png']
